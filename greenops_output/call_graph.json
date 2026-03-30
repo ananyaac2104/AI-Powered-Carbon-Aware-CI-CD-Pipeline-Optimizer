@@ -1,0 +1,815 @@
+{
+  "create_logger": [
+    "has_level_handler"
+  ],
+  "SessionMixin.permanent": [
+    "Scaffold.get"
+  ],
+  "SecureCookieSession.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "SecureCookieSessionInterface.get_signing_serializer": [
+    "Blueprint.extend"
+  ],
+  "SecureCookieSessionInterface.open_session": [
+    "SecureCookieSessionInterface.get_signing_serializer",
+    "Scaffold.get",
+    "SessionInterface.get_cookie_name",
+    "TaggedJSONSerializer.loads"
+  ],
+  "SecureCookieSessionInterface.save_session": [
+    "SessionInterface.get_cookie_name",
+    "SessionInterface.get_cookie_domain",
+    "SessionInterface.get_cookie_path",
+    "SessionInterface.get_cookie_secure",
+    "SessionInterface.get_cookie_partitioned",
+    "SessionInterface.get_cookie_samesite",
+    "SessionInterface.get_cookie_httponly",
+    "SessionInterface.get_expiration_time",
+    "TaggedJSONSerializer.dumps",
+    "SessionInterface.should_set_cookie",
+    "SecureCookieSessionInterface.get_signing_serializer"
+  ],
+  "Config.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "Config.from_envvar": [
+    "Scaffold.get",
+    "Config.from_pyfile"
+  ],
+  "Config.from_prefixed_env": [
+    "TaggedJSONSerializer.loads"
+  ],
+  "Config.from_pyfile": [
+    "Config.from_object",
+    "FlaskClient.open"
+  ],
+  "Config.from_file": [
+    "Config.from_mapping",
+    "FlaskClient.open",
+    "load"
+  ],
+  "Config.__repr__": [
+    "Scaffold.__repr__"
+  ],
+  "_default_template_ctx_processor": [
+    "ProxyMixin._get_current_object"
+  ],
+  "_render": [
+    "Flask.update_template_context"
+  ],
+  "render_template": [
+    "ProxyMixin._get_current_object",
+    "_render"
+  ],
+  "render_template_string": [
+    "ProxyMixin._get_current_object",
+    "_render"
+  ],
+  "_stream": [
+    "Flask.update_template_context",
+    "stream_with_context",
+    "generate",
+    "generate"
+  ],
+  "generate": [
+    "generate"
+  ],
+  "stream_template": [
+    "ProxyMixin._get_current_object",
+    "_stream"
+  ],
+  "stream_template_string": [
+    "ProxyMixin._get_current_object",
+    "_stream"
+  ],
+  "Environment.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "App.create_global_jinja_loader"
+  ],
+  "DispatchingJinjaLoader.get_source": [
+    "DispatchingJinjaLoader._get_source_fast",
+    "DispatchingJinjaLoader._get_source_explained"
+  ],
+  "DispatchingJinjaLoader._get_source_explained": [
+    "DispatchingJinjaLoader._iter_loaders",
+    "explain_template_loading_attempts",
+    "DispatchingJinjaLoader.get_source"
+  ],
+  "DispatchingJinjaLoader._get_source_fast": [
+    "DispatchingJinjaLoader._iter_loaders",
+    "DispatchingJinjaLoader.get_source"
+  ],
+  "DispatchingJinjaLoader._iter_loaders": [
+    "App.iter_blueprints"
+  ],
+  "DispatchingJinjaLoader.list_templates": [
+    "App.iter_blueprints",
+    "DispatchingJinjaLoader.list_templates",
+    "DispatchingJinjaLoader.list_templates"
+  ],
+  "Blueprint.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "Blueprint.send_static_file": [
+    "Flask.get_send_file_max_age",
+    "send_from_directory"
+  ],
+  "Blueprint.open_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "find_best_app": [
+    "_called_with_wrong_args"
+  ],
+  "find_app_by_string": [
+    "_called_with_wrong_args"
+  ],
+  "locate_app": [
+    "find_best_app",
+    "find_app_by_string"
+  ],
+  "with_appcontext": [
+    "FlaskCliRunner.invoke",
+    "ScriptInfo.load_app",
+    "Flask.app_context"
+  ],
+  "decorator": [
+    "stream_with_context"
+  ],
+  "_env_file_callback": [
+    "load_dotenv"
+  ],
+  "_validate_key": [
+    "Scaffold.get"
+  ],
+  "run_command": [
+    "AppGroup.command",
+    "get_debug_flag",
+    "show_server_banner",
+    "ScriptInfo.load_app"
+  ],
+  "shell_command": [
+    "AppGroup.command",
+    "Scaffold.get",
+    "Flask.make_shell_context",
+    "FlaskClient.open"
+  ],
+  "routes_command": [
+    "AppGroup.command"
+  ],
+  "main": [
+    "main"
+  ],
+  "ScriptInfo.__init__": [
+    "get_load_dotenv"
+  ],
+  "ScriptInfo.load_app": [
+    "get_debug_flag",
+    "prepare_import",
+    "locate_app",
+    "prepare_import",
+    "locate_app"
+  ],
+  "AppGroup.command": [
+    "AppContext.pop",
+    "with_appcontext",
+    "AppGroup.command"
+  ],
+  "AppGroup.decorator": [
+    "with_appcontext",
+    "AppGroup.command"
+  ],
+  "AppGroup.group": [
+    "_AppCtxGlobals.setdefault",
+    "AppGroup.group"
+  ],
+  "FlaskGroup.__init__": [
+    "Blueprint.extend",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.__init__",
+    "AppContext.pop"
+  ],
+  "FlaskGroup._load_plugin_commands": [
+    "load"
+  ],
+  "FlaskGroup.get_command": [
+    "FlaskGroup._load_plugin_commands",
+    "FlaskGroup.get_command",
+    "FlaskGroup.get_command",
+    "ScriptInfo.load_app",
+    "ProxyMixin._get_current_object",
+    "Flask.app_context"
+  ],
+  "FlaskGroup.list_commands": [
+    "FlaskGroup._load_plugin_commands",
+    "FlaskGroup.list_commands",
+    "FlaskGroup.list_commands",
+    "ScriptInfo.load_app"
+  ],
+  "FlaskGroup.make_context": [
+    "FlaskGroup.make_context"
+  ],
+  "FlaskGroup.parse_args": [
+    "FlaskGroup.parse_args"
+  ],
+  "Request.blueprints": [
+    "_split_blueprint_path"
+  ],
+  "Request._load_form_data": [
+    "Request._load_form_data",
+    "attach_enctype_error_multidict"
+  ],
+  "Request.on_json_loading_failed": [
+    "Request.on_json_loading_failed"
+  ],
+  "add_ctx": [
+    "ProxyMixin._get_current_object",
+    "ProxyMixin._get_current_object"
+  ],
+  "wrapper": [
+    "Flask.ensure_sync"
+  ],
+  "Flask.__init_subclass__": [
+    "remove_ctx",
+    "add_ctx"
+  ],
+  "Flask.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "Scaffold.add_url_rule",
+    "Flask.send_static_file"
+  ],
+  "Flask.send_static_file": [
+    "Flask.get_send_file_max_age",
+    "send_from_directory"
+  ],
+  "Flask.open_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "Flask.open_instance_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "Flask.update_template_context": [
+    "AppContext.copy",
+    "Flask.ensure_sync"
+  ],
+  "Flask.run": [
+    "get_load_dotenv",
+    "Scaffold.get",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "show_server_banner",
+    "Scaffold.get",
+    "load_dotenv",
+    "get_debug_flag"
+  ],
+  "Flask.handle_http_exception": [
+    "App._find_error_handler",
+    "Flask.ensure_sync"
+  ],
+  "Flask.handle_user_exception": [
+    "App._find_error_handler",
+    "Flask.handle_http_exception",
+    "Flask.ensure_sync",
+    "App.trap_http_exception"
+  ],
+  "Flask.handle_exception": [
+    "Flask.log_exception",
+    "App._find_error_handler",
+    "Flask.finalize_request",
+    "Flask.ensure_sync"
+  ],
+  "Flask.dispatch_request": [
+    "Flask.raise_routing_exception",
+    "Flask.make_default_options_response",
+    "Flask.ensure_sync"
+  ],
+  "Flask.full_dispatch_request": [
+    "Flask.finalize_request",
+    "Flask.preprocess_request",
+    "MethodView.dispatch_request",
+    "Flask.handle_user_exception"
+  ],
+  "Flask.finalize_request": [
+    "make_response",
+    "Flask.process_response"
+  ],
+  "Flask.ensure_sync": [
+    "Flask.async_to_sync"
+  ],
+  "Flask.url_for": [
+    "App.inject_url_defaults",
+    "Flask.create_url_adapter",
+    "App.handle_url_build_error",
+    "Scaffold.get"
+  ],
+  "Flask.make_response": [
+    "DefaultJSONProvider.response"
+  ],
+  "Flask.preprocess_request": [
+    "Flask.ensure_sync"
+  ],
+  "Flask.process_response": [
+    "SessionInterface.is_null_session",
+    "SecureCookieSessionInterface.save_session",
+    "Flask.ensure_sync",
+    "AppContext._get_session",
+    "AppContext._get_session",
+    "Flask.ensure_sync"
+  ],
+  "Flask.do_teardown_request": [
+    "_CollectErrors.raise_any",
+    "Flask.ensure_sync"
+  ],
+  "Flask.do_teardown_appcontext": [
+    "_CollectErrors.raise_any",
+    "Flask.ensure_sync"
+  ],
+  "Flask.request_context": [
+    "AppContext.from_environ"
+  ],
+  "Flask.test_request_context": [
+    "Flask.request_context"
+  ],
+  "Flask.wsgi_app": [
+    "Flask.request_context",
+    "DefaultJSONProvider.response",
+    "AppContext.pop",
+    "AppContext.push",
+    "Flask.full_dispatch_request",
+    "Flask.handle_exception"
+  ],
+  "Flask.__call__": [
+    "Flask.wsgi_app"
+  ],
+  "attach_enctype_error_multidict": [
+    "newcls.__getitem__"
+  ],
+  "explain_template_loading_attempts": [
+    "_dump_loader_info",
+    "Scaffold.get"
+  ],
+  "FormDataRoutingRedirect.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "newcls.__getitem__": [
+    "newcls.__getitem__"
+  ],
+  "after_this_request": [
+    "Scaffold.get"
+  ],
+  "copy_current_request_context": [
+    "Scaffold.get",
+    "AppContext.copy",
+    "Flask.ensure_sync"
+  ],
+  "has_request_context": [
+    "Scaffold.get"
+  ],
+  "has_app_context": [
+    "Scaffold.get"
+  ],
+  "_AppCtxGlobals.get": [
+    "Scaffold.get"
+  ],
+  "_AppCtxGlobals.pop": [
+    "AppContext.pop",
+    "AppContext.pop"
+  ],
+  "_AppCtxGlobals.setdefault": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "_AppCtxGlobals.__repr__": [
+    "Scaffold.get",
+    "Scaffold.__repr__"
+  ],
+  "AppContext.__init__": [
+    "Flask.create_url_adapter"
+  ],
+  "AppContext._get_session": [
+    "SecureCookieSessionInterface.open_session",
+    "SessionInterface.make_null_session"
+  ],
+  "AppContext.session": [
+    "AppContext._get_session"
+  ],
+  "AppContext.push": [
+    "AppContext._get_session",
+    "AppContext.match_request"
+  ],
+  "AppContext.pop": [
+    "Scaffold.get",
+    "_CollectErrors.raise_any",
+    "Flask.do_teardown_appcontext",
+    "Flask.do_teardown_request"
+  ],
+  "AppContext.__enter__": [
+    "AppContext.push"
+  ],
+  "AppContext.__exit__": [
+    "AppContext.pop"
+  ],
+  "EnvironBuilder.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "Scaffold.get"
+  ],
+  "EnvironBuilder.json_dumps": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "FlaskClient.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "_get_werkzeug_version"
+  ],
+  "FlaskClient.session_transaction": [
+    "Flask.test_request_context",
+    "SessionInterface.is_null_session",
+    "SecureCookieSessionInterface.open_session",
+    "SecureCookieSessionInterface.save_session"
+  ],
+  "FlaskClient._request_from_builder_args": [
+    "FlaskClient._copy_environ",
+    "Scaffold.get"
+  ],
+  "FlaskClient.open": [
+    "FlaskClient.open",
+    "FlaskClient._request_from_builder_args",
+    "AppContext.copy",
+    "FlaskClient._copy_environ",
+    "AppContext.copy",
+    "FlaskClient._copy_environ",
+    "AppContext.from_environ",
+    "FlaskClient._copy_environ"
+  ],
+  "FlaskCliRunner.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "FlaskCliRunner.invoke": [
+    "FlaskCliRunner.invoke"
+  ],
+  "get_debug_flag": [
+    "Scaffold.get"
+  ],
+  "get_load_dotenv": [
+    "Scaffold.get"
+  ],
+  "stream_with_context": [
+    "generator",
+    "stream_with_context",
+    "Scaffold.get"
+  ],
+  "generator": [
+    "Scaffold.get"
+  ],
+  "make_response": [
+    "make_response"
+  ],
+  "url_for": [
+    "url_for"
+  ],
+  "redirect": [
+    "App.redirect",
+    "Scaffold.get"
+  ],
+  "abort": [
+    "Scaffold.get"
+  ],
+  "flash": [
+    "Scaffold.get",
+    "ProxyMixin._get_current_object"
+  ],
+  "get_flashed_messages": [
+    "AppContext.pop"
+  ],
+  "_prepare_send_file_kwargs": [
+    "ProxyMixin._get_current_object",
+    "Scaffold.get"
+  ],
+  "send_file": [
+    "send_file",
+    "_prepare_send_file_kwargs"
+  ],
+  "send_from_directory": [
+    "send_from_directory",
+    "_prepare_send_file_kwargs"
+  ],
+  "get_root_path": [
+    "Scaffold.get"
+  ],
+  "_split_blueprint_path": [
+    "Blueprint.extend",
+    "_split_blueprint_path"
+  ],
+  "View.as_view": [
+    "Scaffold.decorator",
+    "Flask.ensure_sync",
+    "Flask.ensure_sync"
+  ],
+  "View.view": [
+    "Flask.ensure_sync"
+  ],
+  "MethodView.__init_subclass__": [
+    "MethodView.__init_subclass__"
+  ],
+  "MethodView.dispatch_request": [
+    "Flask.ensure_sync"
+  ],
+  "BlueprintSetupState.__init__": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "BlueprintSetupState.add_url_rule": [
+    "_AppCtxGlobals.setdefault",
+    "Scaffold.add_url_rule",
+    "_endpoint_from_view_func",
+    "AppContext.pop"
+  ],
+  "Blueprint.record_once": [
+    "Blueprint.record"
+  ],
+  "Blueprint.register": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Blueprint.make_setup_state",
+    "Scaffold.get",
+    "Scaffold.add_url_rule",
+    "Blueprint._merge_blueprint_funcs",
+    "AppContext.copy",
+    "Scaffold.get",
+    "Scaffold.get",
+    "TaggedJSONSerializer.register"
+  ],
+  "Blueprint._merge_blueprint_funcs": [
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend"
+  ],
+  "Blueprint.extend": [
+    "Blueprint.extend"
+  ],
+  "Blueprint.add_url_rule": [
+    "Blueprint.record",
+    "Scaffold.add_url_rule"
+  ],
+  "Blueprint.app_template_filter": [
+    "Blueprint.add_app_template_filter",
+    "Blueprint.add_app_template_filter"
+  ],
+  "Blueprint.decorator": [
+    "Blueprint.record_once",
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.add_app_template_filter": [
+    "Blueprint.record_once",
+    "App.add_template_filter"
+  ],
+  "Blueprint.register_template_filter": [
+    "App.add_template_filter"
+  ],
+  "Blueprint.app_template_test": [
+    "Blueprint.add_app_template_test",
+    "Blueprint.add_app_template_test"
+  ],
+  "Blueprint.add_app_template_test": [
+    "Blueprint.record_once",
+    "App.add_template_test"
+  ],
+  "Blueprint.register_template_test": [
+    "App.add_template_test"
+  ],
+  "Blueprint.app_template_global": [
+    "Blueprint.add_app_template_global",
+    "Blueprint.add_app_template_global"
+  ],
+  "Blueprint.add_app_template_global": [
+    "Blueprint.record_once",
+    "App.add_template_global"
+  ],
+  "Blueprint.register_template_global": [
+    "App.add_template_global"
+  ],
+  "Blueprint.before_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.after_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.teardown_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_context_processor": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_errorhandler": [
+    "Blueprint.record_once",
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.from_blueprint": [
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.app_url_value_preprocessor": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_url_defaults": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "App.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "App.make_config",
+    "App.make_aborter",
+    "App.auto_find_instance_path"
+  ],
+  "App.logger": [
+    "create_logger"
+  ],
+  "App.jinja_env": [
+    "App.create_jinja_environment"
+  ],
+  "App.make_config": [
+    "get_debug_flag"
+  ],
+  "App.auto_find_instance_path": [
+    "find_package"
+  ],
+  "App.register_blueprint": [
+    "TaggedJSONSerializer.register"
+  ],
+  "App.add_url_rule": [
+    "AppContext.pop",
+    "_endpoint_from_view_func",
+    "Scaffold.get"
+  ],
+  "App.template_filter": [
+    "App.add_template_filter",
+    "App.add_template_filter"
+  ],
+  "App.decorator": [
+    "App.add_template_global"
+  ],
+  "App.template_test": [
+    "App.add_template_test",
+    "App.add_template_test"
+  ],
+  "App.template_global": [
+    "App.add_template_global",
+    "App.add_template_global"
+  ],
+  "App._find_error_handler": [
+    "Scaffold._get_exc_class_and_code",
+    "Scaffold.get"
+  ],
+  "App.inject_url_defaults": [
+    "_split_blueprint_path"
+  ],
+  "setupmethod": [
+    "Scaffold._check_setup_finished"
+  ],
+  "wrapper_func": [
+    "Scaffold._check_setup_finished"
+  ],
+  "find_package": [
+    "_find_package_path"
+  ],
+  "Scaffold.__init__": [
+    "get_root_path"
+  ],
+  "Scaffold._method_route": [
+    "Scaffold.route"
+  ],
+  "Scaffold.get": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.post": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.put": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.delete": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.patch": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.route": [
+    "AppContext.pop",
+    "Scaffold.add_url_rule"
+  ],
+  "Scaffold.decorator": [
+    "Scaffold.register_error_handler"
+  ],
+  "Scaffold.before_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.after_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.teardown_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.errorhandler": [
+    "Scaffold.register_error_handler"
+  ],
+  "Scaffold.register_error_handler": [
+    "Scaffold._get_exc_class_and_code"
+  ],
+  "JSONProvider.dump": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "JSONProvider.load": [
+    "TaggedJSONSerializer.loads"
+  ],
+  "JSONProvider.response": [
+    "JSONProvider._prepare_response_obj",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "DefaultJSONProvider.dumps": [
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "DefaultJSONProvider.loads": [
+    "TaggedJSONSerializer.loads"
+  ],
+  "DefaultJSONProvider.response": [
+    "JSONProvider._prepare_response_obj",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "dumps": [
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "dump": [
+    "dump",
+    "_AppCtxGlobals.setdefault",
+    "dump"
+  ],
+  "loads": [
+    "TaggedJSONSerializer.loads",
+    "TaggedJSONSerializer.loads"
+  ],
+  "load": [
+    "load",
+    "load"
+  ],
+  "jsonify": [
+    "DefaultJSONProvider.response"
+  ],
+  "JSONTag.tag": [
+    "TagDateTime.to_json"
+  ],
+  "TagDict.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "PassDict.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "TagTuple.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "PassList.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "TaggedJSONSerializer.__init__": [
+    "TaggedJSONSerializer.register"
+  ],
+  "TaggedJSONSerializer.tag": [
+    "TagDateTime.check",
+    "TaggedJSONSerializer.tag"
+  ],
+  "TaggedJSONSerializer.untag": [
+    "TagDateTime.to_python"
+  ],
+  "TaggedJSONSerializer._untag_scan": [
+    "TaggedJSONSerializer.untag",
+    "TaggedJSONSerializer._untag_scan",
+    "TaggedJSONSerializer._untag_scan"
+  ],
+  "TaggedJSONSerializer.dumps": [
+    "TaggedJSONSerializer.dumps",
+    "TaggedJSONSerializer.tag"
+  ],
+  "TaggedJSONSerializer.loads": [
+    "TaggedJSONSerializer._untag_scan",
+    "TaggedJSONSerializer.loads"
+  ]
+}
