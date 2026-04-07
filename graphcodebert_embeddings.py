@@ -36,6 +36,10 @@ Usage:
 import json
 import logging
 import os
+
+# Mac Silicon / Protobuf Crash Fallback
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+
 import pickle
 from dataclasses import dataclass
 from pathlib import Path
