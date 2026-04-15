@@ -1,0 +1,11 @@
+provider,city,state,zone,co2_intensity,is_provider_avg
+AWS,Mumbai,Maharashtra,ap-south-1,658.97,False
+AWS,Hyderabad,Telangana,ap-south-2,679.88,False
+AWS,ALL_REGIONS_AVG,Maharashtra+Telangana,default,669.42,True
+AZURE,Pune,Maharashtra,centralindia,658.97,False
+AZURE,Mumbai,Maharashtra,westindia,658.97,False
+AZURE,Chennai,Tamil Nadu,southindia,493.19,False
+AZURE,ALL_REGIONS_AVG,Maharashtra+Maharashtra+Tamil Nadu,default,603.71,True
+GCP,Mumbai,Maharashtra,asia-south1,658.97,False
+GCP,Delhi,Delhi,asia-south2,421.04,False
+GCP,ALL_REGIONS_AVG,Maharashtra+Delhi,default,540.0,True
