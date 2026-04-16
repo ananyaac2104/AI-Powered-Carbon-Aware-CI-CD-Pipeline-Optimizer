@@ -1,0 +1,88 @@
+# .github/workflows/greenops_run_tests.yml
+# ==========================================
+# Green-Ops: Dispatched by greenops_trigger.yml with the pruned test matrix.
+# Can also be triggered manually via: gh workflow run greenops_run_tests.yml
+
+name: Green-Ops Run Pruned Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_matrix:
+        description: "JSON matrix from Green-Ops scheduler"
+        required: true
+        default: '{"include": []}'
+      provider:
+        description: "Cloud provider (aws/azure/gcp)"
+        required: false
+        default: "aws"
+      zone:
+        description: "Datacenter zone (e.g. ap-south-1)"
+        required: false
+        default: "ap-south-1"
+      pr_number:
+        description: "PR number for status updates"
+        required: false
+        default: "0"
+
+jobs:
+  run-pruned-tests:
+    name: Run — ${{ matrix.test }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(github.event.inputs.test_matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up environment
+        run: |
+          echo "GREENOPS_PROVIDER=${{ github.event.inputs.provider }}" >> $GITHUB_ENV
+          echo "GREENOPS_ZONE=${{ github.event.inputs.zone }}"         >> $GITHUB_ENV
+          echo "Running ${{ matrix.test }} on ${{ github.event.inputs.provider }}/${{ github.event.inputs.zone }}"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test — ${{ matrix.test }}
+        run: |
+          # ── Replace with your test runner ────────────────────────────────
+          python -m pytest tests/ -k "${{ matrix.test }}" -v             --tb=short             --junit-xml=test-results/${{ matrix.test }}.xml             || true
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.test }}
+          path: test-results/
+
+  run-deferred-tests:
+    name: Run Deferred Tests (Off-Peak)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download deferred test list
+        uses: actions/download-artifact@v4
+        with:
+          name: greenops-artifacts-pr${{ github.event.inputs.pr_number }}
+          path: greenops_output/
+
+      - name: Run deferred tests
+        run: |
+          if [ -f greenops_output/deferred_tests.json ]; then
+            python -c "
+          import json, subprocess
+          with open('greenops_output/deferred_tests.json') as f:
+              data = json.load(f)
+          for test in data.get('tests', []):
+              print(f'Running deferred test: {test}')
+              subprocess.run(['python', '-m', 'pytest', 'tests/', '-k', test, '-v'], check=False)
+            "
+          fi
