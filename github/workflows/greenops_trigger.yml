@@ -1,0 +1,121 @@
+# .github/workflows/greenops_trigger.yml
+#
+# Green-Ops CI/CD Framework — GitHub Actions Trigger
+#
+# Triggers on every Pull Request (opened, updated, reopened).
+# Runs the full preprocessing pipeline:
+#   git diff -> ast_parser.py -> module_db.py -> JSON artifacts
+#
+# SETUP:
+#   1. Add GITHUB_TOKEN is automatically provided by Actions (no setup needed)
+#   2. Place this file at .github/workflows/greenops_trigger.yml in your repo
+#   3. Ensure ast_parser.py and module_db.py are merged to main before
+#      this workflow runs in production (or override paths via env vars)
+
+name: Green-Ops Preprocessing Pipeline
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # Optional: only trigger on changes to source code, not docs
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - ".gitignore"
+
+jobs:
+  greenops-preprocess:
+    name: AST Parse + Module Hash Generation
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read        # needed to checkout code and read diffs
+      pull-requests: read   # needed to read PR metadata
+
+    steps:
+      # ── Step 1: Checkout the PR branch ──────────────────────────────────────
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+        with:
+          # Fetch enough history to compute the diff against base branch
+          fetch-depth: 0
+
+      # ── Step 2: Set up Python ────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── Step 3: Install dependencies ─────────────────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install PyGithub requests pandas scikit-learn
+
+      # ── Step 4: Run Green-Ops integration pipeline ───────────────────────────
+      - name: Run Green-Ops Preprocessing
+        env:
+          GITHUB_TOKEN:    ${{ secrets.GITHUB_TOKEN }}
+          REPO_NAME:       ${{ github.repository }}
+          PR_NUMBER:       ${{ github.event.pull_request.number }}
+          GREENOPS_OUTPUT: ./greenops_output
+          # These point to the files in YOUR repo after both branches merge.
+          # If ast_parser.py or module_db.py are in a subdirectory, update here.
+          AST_PARSER_PATH: ./ast_parser.py
+          MODULE_DB_PATH:  ./module_db.py
+          GITHUB_ACTIONS:  "true"
+        run: |
+          python github_ci_integration.py
+
+      # ── Step 5: Upload artifacts for downstream layers ───────────────────────
+      - name: Upload preprocessing artifacts
+        uses: actions/upload-artifact@v4
+        if: always()   # upload even if the step partially failed
+        with:
+          name: greenops-artifacts-pr${{ github.event.pull_request.number }}
+          path: |
+            greenops_output/preprocessing_artifacts_pr*.json
+            greenops_output/diff_summary_pr*.json
+            greenops_output/raw_diff_pr*.diff
+          retention-days: 30
+
+      # ── Step 6: Post a summary comment on the PR ─────────────────────────────
+      - name: Post PR Summary Comment
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const pr  = context.payload.pull_request.number;
+
+            // Read diff summary artifact
+            let summary = "Green-Ops preprocessing complete.";
+            const summaryPath = `greenops_output/diff_summary_pr${pr}.json`;
+            if (fs.existsSync(summaryPath)) {
+              const data = JSON.parse(fs.readFileSync(summaryPath, 'utf8'));
+              summary = [
+                "## 🌿 Green-Ops Preprocessing Complete",
+                "",
+                `**PR:** #${pr}`,
+                `**Changed files parsed:** ${data.changed_files.length}`,
+                `**Languages detected:** ${data.languages.join(', ')}`,
+                "",
+                "### Changed Modules",
+                ...data.changed_files.map(f => `- \`${f}\``),
+                "",
+                "### Module Hashes",
+                ...Object.entries(data.module_hashes).map(
+                  ([file, hash]) => `- \`${file}\`: \`${hash || 'N/A'}\``
+                ),
+                "",
+                "_Preprocessing artifacts uploaded. Semantic layer (GraphCodeBERT) can now process these._"
+              ].join('\n');
+            }
+
+            await github.rest.issues.createComment({
+              owner:    context.repo.owner,
+              repo:     context.repo.repo,
+              issue_number: pr,
+              body:     summary
+            });
