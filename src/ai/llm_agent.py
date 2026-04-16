@@ -841,6 +841,27 @@ class LLMImpactAnalyzer:
         self.sim_threshold  = sim_threshold
         self.max_transitive = max_transitive
 
+    def decide(self, similarity, carbon_intensity):
+        """
+        Carbon-aware AI decision refinement.
+        Legacy API expected by decision_engine.py
+        Returns 'RUN_TEST' or 'SKIP_TEST'.
+        """
+        # If the code similarity is significant (>0.7), we should probably run tests
+        # regardless of carbon intensity to avoid regression risk.
+        if (float(similarity) if similarity is not None else 0.0) > 0.7:
+            return "RUN_TEST"
+
+        # If carbon intensity is high (> 450 gCO2/kWh) and similarity is moderate/low,
+        # we skip the test to save energy.
+        if (float(carbon_intensity) if carbon_intensity is not None else 0.0) > 450 and \
+           (float(similarity) if similarity is not None else 0.0) < 0.5:
+            return "SKIP_TEST"
+
+        # Default to running tests for safety
+        return "RUN_TEST"
+
+
     def analyze_impact(
         self,
         changed_modules:  list[dict],
@@ -1074,3 +1095,5 @@ if __name__ == "__main__":
               f"conf={item['confidence']:.2f}  depth={item['transitive_depth']}  "
               f"run={item['should_run_tests']}")
         print(f"      → {item['explanation']}")
+
+LLMAgent = LLMImpactAnalyzer

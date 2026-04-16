@@ -30,7 +30,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, roc_auc_score
 
 # If you need to test the pipeline end-to-end, import the LLM analyzer
-from llm_impact_analyzer import LLMImpactAnalyzer
+from src.ai.llm_agent import LLMImpactAnalyzer
 
 logging.basicConfig(
     level=logging.INFO,
@@ -721,3 +721,39 @@ if __name__ == "__main__":
     print(f"  Kafka topics   : {result['reasoning']['kafka_topics']}")
     print(f"  DB tables      : {result['reasoning']['db_tables']}")
     print(f"  LLM summary    : {result['reasoning']['llm_summary']}")
+
+class Gatekeeper(PruningDecisionEngine):
+    """
+    Backward-compatible wrapper for old DecisionEngine.
+    """
+
+    def __init__(self):
+        gatekeeper_model = XGBoostGatekeeper()
+        similarity_engine = EmbeddingSimilarityEngine()
+
+        super().__init__(
+            gatekeeper=gatekeeper_model,
+            similarity_engine=similarity_engine,
+        )
+
+    def predict_failure_prob(self, similarity, change_size):
+        """
+        Legacy API expected by decision_engine.py
+        Returns probability score.
+        """
+        # Map simple parameters to the feature dictionary expected by XGBoostGatekeeper
+        feature_dict = {
+            "cosine_similarity": float(similarity),
+            "change_size": float(change_size),
+            "module_impact_score": 0.5,  # neutral default
+            "transitive_depth": 1,
+        }
+
+        try:
+            # Use the underlying XGBoostGatekeeper's prediction logic (which handles scaling)
+            return self.gatekeeper.predict_failure_prob(feature_dict)
+        except Exception as e:
+            log.warning("Gatekeeper prediction failed: %s — falling back to heuristic", e)
+            # heuristic fallback
+            risk = (1 - similarity) * 0.6 + min(change_size / 100.0, 1.0) * 0.4
+            return float(max(0.0, min(risk, 1.0)))
