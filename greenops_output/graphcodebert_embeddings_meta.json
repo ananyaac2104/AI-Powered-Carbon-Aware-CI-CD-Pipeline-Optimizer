@@ -1,0 +1,14 @@
+[
+  {
+    "identifier": "test.py#add",
+    "token_count": 22,
+    "was_truncated": false,
+    "language": "python"
+  },
+  {
+    "identifier": "test.py#test_add",
+    "token_count": 25,
+    "was_truncated": false,
+    "language": "python"
+  }
+]

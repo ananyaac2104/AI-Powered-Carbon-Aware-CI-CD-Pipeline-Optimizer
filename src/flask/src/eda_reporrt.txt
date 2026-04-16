@@ -1,0 +1,143 @@
+
+============================================================
+PRE-SUBMIT DATASET
+============================================================
+Shape             : (966650, 38)
+Unique builds     : 1588
+Unique test names : 10296
+Pass rate         : 98.01%
+Failure rate      : 1.99%
+Missing durations : 0
+
+Duration stats (seconds):
+count    966650.000000
+mean         32.764214
+std          36.337292
+min           0.100000
+25%           0.600000
+50%          22.800000
+75%          50.300000
+max         600.900000
+
+Top 10 most frequently FAILING tests (pre-submit):
+test_name
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/ce21d5b661/a8b8d0beed_1ec6975045:5fa71cebd8_b1b7c2ef1a_fdab620f0e_5495bbcef3                                                                                                                                                                                                          119
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/ce21d5b661/a8b8d0beed_1ec6975045:5fa71cebd8_5757c0b4a6_dfc7cad15a_686500074e_2ed1fa8a7b_6d0d20058a_64541cc953_9c61436bcb                                                                                                                                                              116
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/ce21d5b661/a8b8d0beed_1ec6975045:5fa71cebd8_aa4adb89a1_fdab620f0e_5495bbcef3                                                                                                                                                                                                          113
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/ce21d5b661/a8b8d0beed_1ec6975045:5fa71cebd8_6ec2d605f8_dfc7cad15a_44f2b1a3d6_f3072864fa_686500074e_f1e5a6f943_6d0d20058a                                                                                                                                                              113
+//4e560f4d05/8c21ea298f/a64d32f263/bea600509a/15d01473e3/bcdf8b6b09/252d4b66a3_b2bf2d31cb/f2b9bb5b73_a714efa340/37dc2de87d:91307962e6_0c29eafa75_37dc2de87d_2469b52805                                                                                                                                                                                     76
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/3626e5d181/da520652a3_61eb7ee63e_006495af3c:76c8857d0d_8daeed4696_da520652a3_61eb7ee63e_006495af3c_b11ac91d69_0cfbecda52_37dc2de87d_37dc2de87d                                                                                                                                                               58
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/3626e5d181/da520652a3_61eb7ee63e_006495af3c/37dc2de87d:e2ea608ea8_6d53d7e8a2                                                                                                                                                                                                                                 57
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/e2ea608ea8/ea8700041e_11141be367/b23ae68ab2_0b15538c64_288232e1df_ef7e31789e_11c76c70a9_942b41721c/361d28ca6e_918f685a3a_949c5a169e_1126410b8e_afe8f14541:afdb0bf64c_6145096f3a_e179a9443b_0031f66f7a_79949b2fa5_0c1c3bafbc_79949b2fa5_e68b9c4ba1_00503b84bb_143b521223_41124eed98     52
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/e2ea608ea8/ea8700041e_11141be367/3586b5c25e_f398d4fe75_d18858e679_287a132559/314e7a96a2_484ab12369:afdb0bf64c_6145096f3a_eed0002613_0031f66f7a_79949b2fa5_1ec6975045_a3b3531f1e_9e1dac3cbb_61ed457ac9_6d0d20058a_2ed1fa8a7b_a706e35e2a_6c21bde740_44f2b1a3d6_3323bb948d                52
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/aab532207f_37dc2de87d/e2ea608ea8/7034196272_11141be367/93a03082f7_09824482e6_686500074e_f394def5c3_ae0c1b9564:afdb0bf64c_bb4c97c27d_bb4c97c27d_8455dc0597_f394def5c3_ae0c1b9564_686500074e_0031f66f7a_1fad5c4c67                                                                                             52
+
+============================================================
+POST-SUBMIT DATASET
+============================================================
+Shape             : (1026721, 38)
+Unique builds     : 10719
+Unique test names : 361
+Pass rate         : 40.31%
+Failure rate      : 59.69%
+Missing durations : 0
+
+Duration stats (seconds):
+count    1.026721e+06
+mean     8.491426e+01
+std      1.752113e+02
+min      1.000000e-01
+25%      2.600000e+00
+50%      2.330000e+01
+75%      8.720000e+01
+max      3.152200e+03
+
+Top 10 most frequently FAILING tests (post-submit):
+test_name
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a89da086ec_fb240e9ba1/5fa71cebd8_de0901ef91:ec4c5cfb5f_d286e8d953_58bca7eaa4_de0901ef91_37dc2de87d               10765
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a89da086ec_fb240e9ba1/5fa71cebd8_de0901ef91:ec4c5cfb5f_a1a8b44cbd_58bca7eaa4_de0901ef91_37dc2de87d               10765
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a89da086ec_fb240e9ba1/5fa71cebd8_de0901ef91:ec4c5cfb5f_d286e8d953_becd94127a_de0901ef91_37dc2de87d               10762
+//4e560f4d05/8c21ea298f/a64d32f263/b11ac91d69/e4bc288aec:b11ac91d69_4f4b6dbb01_4b496bd377_7ed53b0e48_8e780925d7_9bcd6b40e8                                                           10762
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a89da086ec_fb240e9ba1/5fa71cebd8_de0901ef91:ec4c5cfb5f_a1a8b44cbd_becd94127a_de0901ef91_37dc2de87d               10760
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/6d0d20058a_0c1b9f4291:b8be958024_6145096f3a_6145096f3a_bb4c97c27d_a2e2bd6d93_1fad5c4c67_d222adda6f_f1e5a6f943    10759
+//4e560f4d05/8c21ea298f/a64d32f263/472ac3c709/1e554aaa93/928485a8e9_a671527e7a_25abd6d1db_caabfb52c0/37dc2de87d/dc1f6a3993_77d6a4dc35:77d6a4dc35_a999099785_526a99833a               10750
+//4e560f4d05/8c21ea298f/a64d32f263/472ac3c709/e4bc288aec/3d53c65d19/98c0697155_719952242b_5c855ea662/37dc2de87d:37dc2de87d_2e9cb2d0ba_98c0697155_719952242b_5c855ea662_bfc0ea99bd    10726
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a2aaa75e39_cbcb34b482_37dc2de87d:d532e71557_044639387c_7d8da11e32_7c638b0179_25abd6d1db_cbcb34b482_37dc2de87d    10171
+//4e560f4d05/8c21ea298f/a64d32f263/37dc2de87d/593b7fa5eb_37dc2de87d/a2aaa75e39_cbcb34b482_37dc2de87d:6d0d20058a_ce21d5b661_deb3078dc1_4216d866a1_cbcb34b482_37dc2de87d               10147
+
+============================================================
+COMBINED / DELTA FEATURES
+============================================================
+Shape                           : (1988265, 17)
+Regression events (pre pass -> post fail): 0
+Only in pre-submit              : 966589
+Only in post-submit             : 1021676
+
+Delta pass rate stats:
+count    1988265.0
+mean           0.0
+std            0.0
+min            0.0
+25%            0.0
+50%            0.0
+75%            0.0
+max            0.0
+
+============================================================
+CLASS BALANCE (for XGBoost Pf model)
+============================================================
+Pre-submit:
+test_result
+PASSED    947406
+FAILED     19244
+
+Post-submit:
+test_result
+FAILED    612867
+PASSED    413854
+
+Pre-submit  minority class : 1.99%
+Post-submit minority class : 40.31%
+
+Note: If minority class < 10%, use scale_pos_weight in XGBoost
+  Recommended scale_pos_weight (pre)  ~ 49.2
+  Recommended scale_pos_weight (post) ~ 1.5
+
+============================================================
+FEATURE COLUMNS GENERATED
+============================================================
+  * test_duration
+  * test_result
+  * is_duration_outlier
+  * duration_log
+  * duration_zscore
+  * test_duration_mean
+  * test_duration_std
+  * test_duration_ratio
+  * test_pass_rate
+  * test_failure_rate
+  * test_total_runs
+  * test_total_failures
+  * test_flakiness_score
+  * build_pass_rate
+  * build_test_count
+  * build_failure_count
+  * build_has_failure
+  * test_is_unit
+  * test_is_integration
+  * test_is_e2e
+  * test_is_perf
+  * test_is_smoke
+  * test_name_length
+  * test_name_depth
+  * test_name_hash
+  * build_seg_0
+  * build_seg_1
+  * build_seg_2
+  * build_seg_3
+  * build_depth
+  * build_seg_0_enc
+  * build_seg_1_enc
+  * build_seg_2_enc
+  * build_seg_3_enc
+  * duration_normalized
