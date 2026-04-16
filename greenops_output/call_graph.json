@@ -1,0 +1,3871 @@
+{
+  "test_options_work": [
+    "Scaffold.route",
+    "FlaskClient.open"
+  ],
+  "index": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "render_template"
+  ],
+  "test_options_on_multiple_rules": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "FlaskClient.open"
+  ],
+  "index_put": [
+    "Scaffold.route"
+  ],
+  "test_method_route_no_methods": [
+    "Scaffold.get"
+  ],
+  "test_provide_automatic_options_attr_disable": [
+    "Scaffold.add_url_rule",
+    "options"
+  ],
+  "test_provide_automatic_options_attr_enable": [
+    "Scaffold.add_url_rule",
+    "options"
+  ],
+  "test_provide_automatic_options_arg_disable": [
+    "Scaffold.get",
+    "options"
+  ],
+  "test_provide_automatic_options_method_disable": [
+    "Scaffold.add_url_rule",
+    "options",
+    "View.as_view"
+  ],
+  "test_request_dispatching": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.post",
+    "Index.head",
+    "Scaffold.delete",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.get"
+  ],
+  "more": [
+    "Scaffold.route"
+  ],
+  "test_disallow_string_for_allowed_methods": [
+    "Scaffold.add_url_rule"
+  ],
+  "test_url_mapping": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "Scaffold.post",
+    "Index.head",
+    "Scaffold.delete",
+    "FlaskClient.open",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.get"
+  ],
+  "test_werkzeug_routing": [
+    "add",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_endpoint_decorator": [
+    "add",
+    "Scaffold.endpoint",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "bar": [
+    "Scaffold.route"
+  ],
+  "test_session_accessed": [
+    "Scaffold.post",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "do_set": [
+    "Scaffold.post"
+  ],
+  "do_get": [
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "do_nothing": [
+    "Scaffold.get"
+  ],
+  "test_session_path": [
+    "update",
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_session_using_application_root": [
+    "update",
+    "Scaffold.route",
+    "Scaffold.get",
+    "app"
+  ],
+  "test_session_using_session_settings": [
+    "update",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "AppContext.pop"
+  ],
+  "clear": [
+    "Scaffold.route",
+    "clear"
+  ],
+  "test_session_using_samesite_attribute": [
+    "Scaffold.route",
+    "update",
+    "update",
+    "Scaffold.get",
+    "update",
+    "Scaffold.get",
+    "update",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_missing_session": [
+    "Flask.test_request_context",
+    "expect_exception",
+    "expect_exception",
+    "Scaffold.get"
+  ],
+  "test_session_secret_key_fallbacks": [
+    "Scaffold.post",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "set_session": [
+    "Scaffold.route"
+  ],
+  "get_session": [
+    "Scaffold.route"
+  ],
+  "test_session_expiration": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "AppGroup.group"
+  ],
+  "test": [
+    "Scaffold.route"
+  ],
+  "test_session_stored_last": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "dump_session_contents": [
+    "Scaffold.route"
+  ],
+  "test_session_special_types": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_session_cookie_setting": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "run_test",
+    "run_test",
+    "run_test",
+    "run_test",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "bump": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "read": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "run_test": [
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_session_vary_cookie": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "expect",
+    "expect",
+    "expect",
+    "expect",
+    "expect",
+    "expect",
+    "expect",
+    "expect",
+    "Scaffold.get",
+    "_AppCtxGlobals.setdefault",
+    "clear"
+  ],
+  "get": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "getitem": [
+    "Scaffold.route"
+  ],
+  "setdefault": [
+    "Scaffold.route",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "vary_cookie_header_set": [
+    "Scaffold.route",
+    "add"
+  ],
+  "vary_header_set": [
+    "Scaffold.route",
+    "update"
+  ],
+  "no_vary_header": [
+    "Scaffold.route"
+  ],
+  "expect": [
+    "Scaffold.get"
+  ],
+  "test_session_refresh_vary": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "login": [
+    "Scaffold.route",
+    "render_template",
+    "get_db",
+    "flash",
+    "clear",
+    "App.redirect",
+    "url_for"
+  ],
+  "ignored": [
+    "Scaffold.get"
+  ],
+  "test_flashes": [
+    "flash",
+    "flash",
+    "get_flashed_messages"
+  ],
+  "test_extended_flashing": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "flash",
+    "flash"
+  ],
+  "test_with_categories": [
+    "Scaffold.route",
+    "get_flashed_messages"
+  ],
+  "test_filter": [
+    "Scaffold.route",
+    "get_flashed_messages"
+  ],
+  "test_filters": [
+    "Scaffold.route",
+    "get_flashed_messages"
+  ],
+  "test_filters2": [
+    "Scaffold.route",
+    "get_flashed_messages"
+  ],
+  "test_request_processing": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.get"
+  ],
+  "test_request_preprocessing_early_return": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_after_request_processing": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_teardown_request_handler": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "root": [
+    "Scaffold.route"
+  ],
+  "test_teardown_request_handler_debug_mode": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_teardown_request_handler_error": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "fails": [
+    "Scaffold.route"
+  ],
+  "test_before_after_request_order": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_error_handling": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "abort",
+    "abort"
+  ],
+  "not_found": [
+    "Scaffold.errorhandler"
+  ],
+  "internal_server_error": [
+    "Scaffold.errorhandler"
+  ],
+  "forbidden": [
+    "Scaffold.route"
+  ],
+  "error": [
+    "Scaffold.get",
+    "abort"
+  ],
+  "error2": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_error_handling_processing": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "broken_func": [
+    "Scaffold.route"
+  ],
+  "test_baseexception_error_handling": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_before_request_and_routing_errors": [
+    "Scaffold.errorhandler",
+    "Scaffold.get"
+  ],
+  "return_something": [
+    "Scaffold.errorhandler"
+  ],
+  "test_user_error_handling": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "handle_my_exception": [
+    "Scaffold.errorhandler"
+  ],
+  "test_http_error_subclass_handling": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "handle_forbidden_subclass": [
+    "Scaffold.errorhandler"
+  ],
+  "handle_403": [
+    "Scaffold.errorhandler"
+  ],
+  "index1": [
+    "Scaffold.route"
+  ],
+  "index2": [
+    "Scaffold.route",
+    "render_template"
+  ],
+  "index3": [
+    "Scaffold.route"
+  ],
+  "test_errorhandler_precedence": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "handle_e2": [
+    "Scaffold.errorhandler"
+  ],
+  "handle_exception": [
+    "Scaffold.errorhandler"
+  ],
+  "raise_e1": [
+    "Scaffold.route"
+  ],
+  "raise_e3": [
+    "Scaffold.route"
+  ],
+  "test_trap_bad_request_key_error": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "fail": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "allow_abort": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_trapping_of_all_http_exceptions": [
+    "Scaffold.route",
+    "abort",
+    "Scaffold.get"
+  ],
+  "test_error_handler_after_processor_error": [
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.get"
+  ],
+  "test_enctype_debug_helper": [
+    "Scaffold.route",
+    "Scaffold.post"
+  ],
+  "test_response_types": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "from_text": [
+    "Scaffold.route"
+  ],
+  "from_bytes": [
+    "Scaffold.route"
+  ],
+  "from_full_tuple": [
+    "Scaffold.route"
+  ],
+  "from_text_headers": [
+    "Scaffold.route"
+  ],
+  "from_text_status": [
+    "Scaffold.route"
+  ],
+  "from_response_headers": [
+    "Scaffold.route"
+  ],
+  "from_response_status": [
+    "Scaffold.route"
+  ],
+  "from_wsgi": [
+    "Scaffold.route"
+  ],
+  "from_dict": [
+    "Scaffold.route"
+  ],
+  "from_list": [
+    "Scaffold.route"
+  ],
+  "test_response_type_errors": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "from_none": [
+    "Scaffold.route"
+  ],
+  "from_small_tuple": [
+    "Scaffold.route"
+  ],
+  "from_large_tuple": [
+    "Scaffold.route"
+  ],
+  "from_bad_type": [
+    "Scaffold.route"
+  ],
+  "from_bad_wsgi": [
+    "Scaffold.route"
+  ],
+  "test_make_response": [
+    "make_response",
+    "make_response",
+    "make_response",
+    "make_response"
+  ],
+  "test_make_response_with_response_instance": [
+    "make_response",
+    "make_response",
+    "make_response",
+    "jsonify"
+  ],
+  "test_jsonify_no_prettyprint": [
+    "DefaultJSONProvider.response"
+  ],
+  "test_jsonify_mimetype": [
+    "make_response",
+    "jsonify"
+  ],
+  "test_json_dump_dataclass": [
+    "TaggedJSONSerializer.dumps",
+    "TaggedJSONSerializer.loads"
+  ],
+  "test_jsonify_args_and_kwargs_check": [
+    "jsonify"
+  ],
+  "test_url_generation": [
+    "Scaffold.route",
+    "url_for",
+    "url_for"
+  ],
+  "hello": [
+    "Scaffold.route"
+  ],
+  "test_build_error_handler": [
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "url_for",
+    "url_for"
+  ],
+  "test_build_error_handler_reraise": [
+    "Flask.test_request_context"
+  ],
+  "test_url_for_passes_special_values_to_build_error_handler": [
+    "Flask.test_request_context",
+    "url_for"
+  ],
+  "test_static_files": [
+    "Scaffold.get",
+    "Flask.test_request_context",
+    "url_for"
+  ],
+  "test_static_url_path": [
+    "Scaffold.get",
+    "Flask.test_request_context",
+    "url_for",
+    "Flask.test_client"
+  ],
+  "test_static_url_path_with_ending_slash": [
+    "Scaffold.get",
+    "Flask.test_request_context",
+    "url_for",
+    "Flask.test_client"
+  ],
+  "test_static_url_empty_path": [
+    "FlaskClient.open",
+    "Flask.test_client"
+  ],
+  "test_static_url_empty_path_default": [
+    "FlaskClient.open",
+    "Flask.test_client"
+  ],
+  "test_static_folder_with_pathlib_path": [
+    "FlaskClient.open",
+    "Flask.test_client"
+  ],
+  "test_static_folder_with_ending_slash": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "catch_all": [
+    "Scaffold.route"
+  ],
+  "test_static_route_with_host_matching": [
+    "Flask.test_client",
+    "Scaffold.get",
+    "Flask.test_request_context",
+    "url_for"
+  ],
+  "test_server_name_matching": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_server_name_subdomain": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "subdomain": [
+    "Scaffold.route"
+  ],
+  "test_exception_propagation": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_werkzeug_passthrough_errors": [
+    "Flask.run",
+    "Scaffold.get"
+  ],
+  "run_simple_mock": [
+    "Scaffold.get"
+  ],
+  "test_url_processors": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "AppContext.pop",
+    "url_for",
+    "url_for",
+    "url_for",
+    "_AppCtxGlobals.setdefault",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "add_language_code": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "pull_lang_code": [
+    "AppContext.pop"
+  ],
+  "about": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "something_else": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "test_inject_blueprint_url_defaults": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.inject_url_defaults",
+    "Flask.test_request_context",
+    "url_for"
+  ],
+  "view": [
+    "Scaffold.route"
+  ],
+  "test_nonascii_pathinfo": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_no_setup_after_first_request": [
+    "Scaffold.route",
+    "Scaffold.add_url_rule",
+    "Scaffold.get"
+  ],
+  "test_routing_redirect_debugging": [
+    "Scaffold.route",
+    "Scaffold.post",
+    "Scaffold.post"
+  ],
+  "user": [
+    "Scaffold.route"
+  ],
+  "test_route_decorator_custom_endpoint": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "foo": [
+    "Scaffold.route"
+  ],
+  "for_bar": [
+    "Scaffold.route"
+  ],
+  "for_bar_foo": [
+    "Scaffold.route"
+  ],
+  "test_get_method_on_g": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_subdomain_basic_support": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "normal_index": [
+    "Scaffold.route"
+  ],
+  "test_index": [
+    "Scaffold.get"
+  ],
+  "test_subdomain_matching": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_subdomain_matching_with_ports": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_subdomain_matching_other_name": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_multi_route_rules": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "test_multi_route_class_views": [
+    "FlaskClient.open",
+    "FlaskClient.open",
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule"
+  ],
+  "test_run_defaults": [
+    "Flask.run"
+  ],
+  "test_run_server_port": [
+    "Flask.run"
+  ],
+  "test_run_from_config": [
+    "Flask.run"
+  ],
+  "test_max_cookie_size": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "AppContext.pop",
+    "Scaffold.get",
+    "Flask.app_context"
+  ],
+  "PrefixPathMiddleware.__call__": [
+    "app"
+  ],
+  "View.__init__": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule"
+  ],
+  "_reset_os_environ": [
+    "Blueprint.extend"
+  ],
+  "app": [
+    "create_app",
+    "Wrapper.close",
+    "Flask.app_context",
+    "init_db",
+    "get_db"
+  ],
+  "app_ctx": [
+    "Flask.app_context"
+  ],
+  "req_ctx": [
+    "Flask.test_request_context"
+  ],
+  "client": [
+    "Flask.test_client"
+  ],
+  "test_apps": [
+    "set",
+    "AppContext.pop"
+  ],
+  "leak_detector": [
+    "AppContext.pop",
+    "ProxyMixin._get_current_object"
+  ],
+  "purge_module": [
+    "AppContext.pop"
+  ],
+  "inner": [
+    "AppContext.pop"
+  ],
+  "test_custom_converters": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "Scaffold.get",
+    "url_for"
+  ],
+  "test_context_available": [
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "reset_logging": [
+    "TaggedJSONSerializer.register"
+  ],
+  "test_wsgi_errors_stream": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "error",
+    "ProxyMixin._get_current_object",
+    "Flask.test_request_context",
+    "ProxyMixin._get_current_object"
+  ],
+  "test_has_level_handler": [
+    "has_level_handler",
+    "has_level_handler",
+    "has_level_handler",
+    "has_level_handler"
+  ],
+  "test_log_view_exception": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_template_rendered": [
+    "Scaffold.route",
+    "render_template",
+    "Scaffold.get"
+  ],
+  "test_before_render_template": [
+    "Scaffold.route",
+    "render_template",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "test_request_signals": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "test_request_exception_signal": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "test_appcontext_signals": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_flash_signal": [
+    "Scaffold.route",
+    "flash",
+    "App.redirect",
+    "Flask.test_client",
+    "FlaskClient.session_transaction",
+    "Scaffold.get"
+  ],
+  "test_appcontext_tearing_down_signal": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_max_content_length": [
+    "Scaffold.post",
+    "Scaffold.errorhandler",
+    "Scaffold.post"
+  ],
+  "catcher": [
+    "Scaffold.errorhandler"
+  ],
+  "test_limit_config": [
+    "Flask.app_context",
+    "Flask.app_context"
+  ],
+  "test_trusted_hosts_config": [
+    "Scaffold.get",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "_async_app": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "View.as_view"
+  ],
+  "handle": [
+    "Scaffold.errorhandler"
+  ],
+  "bp_index": [
+    "Scaffold.route"
+  ],
+  "bp_handle": [
+    "Scaffold.errorhandler"
+  ],
+  "bp_error": [
+    "Scaffold.route"
+  ],
+  "test_async_route": [
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.post"
+  ],
+  "test_async_error_handler": [
+    "Flask.test_client",
+    "Scaffold.get"
+  ],
+  "test_async_before_after_request": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_open_session_with_endpoint": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "AppContext.match_request",
+    "Flask.test_client"
+  ],
+  "MySessionInterface.open_session": [
+    "AppContext.match_request"
+  ],
+  "test_uninstalled_module_paths": [
+    "purge_module"
+  ],
+  "test_uninstalled_package_paths": [
+    "purge_module"
+  ],
+  "test_uninstalled_namespace_paths": [
+    "create_namespace",
+    "create_namespace",
+    "purge_module",
+    "purge_module"
+  ],
+  "test_installed_module_paths": [
+    "purge_module"
+  ],
+  "test_installed_package_paths": [
+    "purge_module"
+  ],
+  "test_prefix_package_paths": [
+    "purge_module"
+  ],
+  "common_test": [
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.put",
+    "FlaskClient.open"
+  ],
+  "test_basic_view": [
+    "Scaffold.add_url_rule",
+    "common_test",
+    "View.as_view"
+  ],
+  "test_method_based_view": [
+    "Scaffold.add_url_rule",
+    "common_test",
+    "View.as_view"
+  ],
+  "test_view_patching": [
+    "View.as_view",
+    "Scaffold.add_url_rule",
+    "common_test"
+  ],
+  "test_view_inheritance": [
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "FlaskClient.open"
+  ],
+  "test_view_decorators": [
+    "Scaffold.add_url_rule",
+    "Scaffold.get",
+    "make_response",
+    "View.as_view"
+  ],
+  "add_x_parachute": [
+    "make_response"
+  ],
+  "new_function": [
+    "make_response"
+  ],
+  "test_view_provide_automatic_options_attr_disable": [
+    "Scaffold.add_url_rule",
+    "options",
+    "View.as_view"
+  ],
+  "test_view_provide_automatic_options_attr_enable": [
+    "Scaffold.add_url_rule",
+    "options",
+    "View.as_view"
+  ],
+  "test_implicit_head": [
+    "Scaffold.add_url_rule",
+    "Scaffold.get",
+    "Index.head",
+    "View.as_view"
+  ],
+  "test_explicit_head": [
+    "Scaffold.add_url_rule",
+    "Scaffold.get",
+    "Index.head",
+    "View.as_view"
+  ],
+  "test_endpoint_override": [
+    "Scaffold.add_url_rule",
+    "common_test",
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "View.as_view"
+  ],
+  "test_methods_var_inheritance": [
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "Scaffold.get",
+    "FlaskClient.open"
+  ],
+  "test_multiple_inheritance": [
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "Scaffold.get",
+    "Scaffold.delete"
+  ],
+  "test_remove_method_from_parent": [
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "Scaffold.get",
+    "Scaffold.post"
+  ],
+  "test_init_once": [
+    "Scaffold.add_url_rule",
+    "View.as_view",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_dump_load_unchanged": [
+    "TaggedJSONSerializer.loads",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "test_duplicate_tag": [
+    "TaggedJSONSerializer.register"
+  ],
+  "test_custom_tag": [
+    "TaggedJSONSerializer.register",
+    "TaggedJSONSerializer.tag",
+    "TaggedJSONSerializer.loads",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "test_tag_order": [
+    "TaggedJSONSerializer.register",
+    "TaggedJSONSerializer.register"
+  ],
+  "TagFoo.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "test_suppressed_exception_logging": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "test_teardown_on_pop": [
+    "Flask.test_request_context",
+    "AppContext.push",
+    "AppContext.pop"
+  ],
+  "test_teardown_with_previous_exception": [
+    "Flask.test_request_context"
+  ],
+  "test_teardown_with_handled_exception": [
+    "Flask.test_request_context"
+  ],
+  "test_proper_test_request_context": [
+    "update",
+    "Scaffold.route",
+    "Scaffold.route",
+    "update",
+    "update",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "url_for",
+    "url_for",
+    "Flask.test_request_context"
+  ],
+  "sub": [
+    "Scaffold.route"
+  ],
+  "test_context_binding": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "index",
+    "meh"
+  ],
+  "meh": [
+    "Scaffold.route"
+  ],
+  "test_context_test": [
+    "Flask.test_request_context",
+    "AppContext.push",
+    "has_request_context",
+    "has_request_context",
+    "AppContext.pop"
+  ],
+  "test_manual_context_binding": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "AppContext.push",
+    "AppContext.pop",
+    "index",
+    "index"
+  ],
+  "test_session_error_pops_context": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.test_client"
+  ],
+  "test_session_dynamic_cookie_name": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.post",
+    "Scaffold.post",
+    "Scaffold.get",
+    "Scaffold.get",
+    "SessionInterface.get_cookie_name"
+  ],
+  "set": [
+    "Scaffold.route"
+  ],
+  "set_dynamic_cookie": [
+    "Scaffold.route"
+  ],
+  "get_dynamic_cookie": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "TestGreenletContextCopying.test_greenlet_context_copying": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.run",
+    "AppContext.copy",
+    "Scaffold.get"
+  ],
+  "TestGreenletContextCopying.index": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "TestGreenletContextCopying.g": [
+    "Scaffold.get"
+  ],
+  "TestGreenletContextCopying.test_greenlet_context_copying_api": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Flask.run",
+    "Scaffold.get"
+  ],
+  "PathAwareSessionInterface.get_cookie_name": [
+    "SessionInterface.get_cookie_name"
+  ],
+  "test_blueprint_specific_error_handling": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Scaffold.errorhandler",
+    "abort",
+    "abort",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "frontend_forbidden": [
+    "Scaffold.errorhandler"
+  ],
+  "frontend_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "backend_forbidden": [
+    "Scaffold.errorhandler"
+  ],
+  "backend_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "sideend_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "app_forbidden": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_blueprint_specific_user_error_handling": [
+    "Scaffold.errorhandler",
+    "Scaffold.register_error_handler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "my_decorator_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "blue_deco_test": [
+    "Scaffold.route"
+  ],
+  "blue_func_test": [
+    "Scaffold.route"
+  ],
+  "test_blueprint_app_error_handling": [
+    "Blueprint.app_errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "abort",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "forbidden_handler": [
+    "Blueprint.app_errorhandler"
+  ],
+  "bp_forbidden": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_blueprint_prefix_slash": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.get"
+  ],
+  "test_blueprint_url_defaults": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_blueprint_url_processors": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "_AppCtxGlobals.setdefault",
+    "AppContext.pop",
+    "url_for",
+    "url_for",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_templates_and_static": [
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "Flask.test_request_context",
+    "Scaffold.get",
+    "url_for",
+    "render_template",
+    "render_template"
+  ],
+  "test_default_static_max_age": [
+    "App.register_blueprint",
+    "Flask.test_request_context",
+    "Flask.send_static_file"
+  ],
+  "test_templates_list": [
+    "DispatchingJinjaLoader.list_templates"
+  ],
+  "test_dotted_names_from_app": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "url_for",
+    "url_for"
+  ],
+  "app_index": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "test_empty_url_defaults": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "something": [
+    "Scaffold.route",
+    "Scaffold.route"
+  ],
+  "foo_bar": [
+    "Scaffold.route"
+  ],
+  "foo_bar_foo": [
+    "Scaffold.route"
+  ],
+  "bar_foo": [
+    "Scaffold.route"
+  ],
+  "test_route_decorator_custom_endpoint_with_dots": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "Scaffold.route"
+  ],
+  "foobar": [
+    "Scaffold.endpoint"
+  ],
+  "test_template_filter": [
+    "App.template_filter",
+    "App.template_filter",
+    "App.template_filter"
+  ],
+  "my_reverse": [
+    "App.template_filter"
+  ],
+  "my_reverse_3": [
+    "App.template_filter"
+  ],
+  "my_reverse_4": [
+    "App.template_filter"
+  ],
+  "test_add_template_filter": [
+    "App.add_template_filter"
+  ],
+  "test_template_filter_with_name": [
+    "App.template_filter"
+  ],
+  "test_add_template_filter_with_name": [
+    "App.add_template_filter"
+  ],
+  "test_template_filter_with_template": [
+    "App.template_filter",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "super_reverse": [
+    "App.template_filter"
+  ],
+  "test_template_filter_after_route_with_template": [
+    "Scaffold.route",
+    "Blueprint.app_template_filter",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_add_template_filter_with_template": [
+    "App.add_template_filter",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_template_filter_with_name_and_template": [
+    "App.template_filter",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_add_template_filter_with_name_and_template": [
+    "App.add_template_filter",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_template_test": [
+    "App.template_test",
+    "App.template_test",
+    "App.template_test"
+  ],
+  "is_boolean": [
+    "App.template_test"
+  ],
+  "boolean_3": [
+    "App.template_test"
+  ],
+  "boolean_4": [
+    "App.template_test"
+  ],
+  "test_add_template_test": [
+    "App.add_template_test"
+  ],
+  "test_template_test_with_name": [
+    "App.template_test"
+  ],
+  "test_add_template_test_with_name": [
+    "App.add_template_test"
+  ],
+  "test_template_test_with_template": [
+    "App.template_test",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "boolean": [
+    "App.template_test"
+  ],
+  "test_template_test_after_route_with_template": [
+    "Scaffold.route",
+    "Blueprint.app_template_test",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_add_template_test_with_template": [
+    "App.add_template_test",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_template_test_with_name_and_template": [
+    "App.template_test",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_add_template_test_with_name_and_template": [
+    "App.add_template_test",
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_context_processing": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "template_string": [
+    "render_template_string"
+  ],
+  "bp_page": [
+    "Scaffold.route",
+    "template_string"
+  ],
+  "app_page": [
+    "Scaffold.route",
+    "template_string"
+  ],
+  "test_template_global": [
+    "Blueprint.app_template_global",
+    "Blueprint.app_template_global",
+    "Blueprint.app_template_global",
+    "App.register_blueprint",
+    "Flask.app_context",
+    "render_template_string",
+    "render_template_string",
+    "render_template_string",
+    "render_template_string"
+  ],
+  "get_answer": [
+    "Blueprint.app_template_global"
+  ],
+  "get_stuff_2": [
+    "App.template_global"
+  ],
+  "get_stuff_3": [
+    "App.template_global"
+  ],
+  "bp_endpoint": [
+    "Scaffold.route"
+  ],
+  "test_app_request_processing": [
+    "App.register_blueprint",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_app_url_processors": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "_AppCtxGlobals.setdefault",
+    "AppContext.pop",
+    "url_for",
+    "url_for",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_nested_blueprint": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "abort",
+    "abort",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "parent_index": [
+    "Scaffold.route"
+  ],
+  "parent_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "child_index": [
+    "Scaffold.route"
+  ],
+  "child_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "grandchild_forbidden": [
+    "Scaffold.errorhandler"
+  ],
+  "grandchild_index": [
+    "Scaffold.route"
+  ],
+  "grandchild_no": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_nested_callback_order": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "render_template_string",
+    "AppContext.pop",
+    "AppContext.pop",
+    "AppContext.pop"
+  ],
+  "app_before1": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "app_teardown1": [
+    "AppContext.pop"
+  ],
+  "app_before2": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "app_teardown2": [
+    "AppContext.pop"
+  ],
+  "parent_before1": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "parent_teardown1": [
+    "AppContext.pop"
+  ],
+  "parent_before2": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "parent_teardown2": [
+    "AppContext.pop"
+  ],
+  "child_before1": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "child_teardown1": [
+    "AppContext.pop"
+  ],
+  "child_before2": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "child_teardown2": [
+    "AppContext.pop"
+  ],
+  "a": [
+    "Scaffold.route"
+  ],
+  "b": [
+    "Scaffold.route",
+    "render_template_string"
+  ],
+  "test_nesting_url_prefixes": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Scaffold.get"
+  ],
+  "test_nesting_subdomains": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Scaffold.get"
+  ],
+  "test_child_and_parent_subdomain": [
+    "Scaffold.route",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_unique_blueprint_names": [
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint"
+  ],
+  "test_self_registration": [
+    "App.register_blueprint"
+  ],
+  "test_blueprint_renaming": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.errorhandler",
+    "Scaffold.get",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "abort",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_config_from_pyfile": [
+    "Config.from_pyfile",
+    "common_object_test"
+  ],
+  "test_config_from_object": [
+    "Config.from_object",
+    "common_object_test"
+  ],
+  "test_config_from_file_json": [
+    "Config.from_file",
+    "common_object_test"
+  ],
+  "test_config_from_file_toml": [
+    "Config.from_file",
+    "common_object_test"
+  ],
+  "test_from_prefixed_env": [
+    "Config.from_prefixed_env"
+  ],
+  "test_from_prefixed_env_custom_prefix": [
+    "Config.from_prefixed_env"
+  ],
+  "test_from_prefixed_env_nested": [
+    "Config.from_prefixed_env"
+  ],
+  "test_config_from_mapping": [
+    "Config.from_mapping",
+    "common_object_test",
+    "Config.from_mapping",
+    "common_object_test",
+    "Config.from_mapping",
+    "common_object_test",
+    "Config.from_mapping",
+    "common_object_test",
+    "Config.from_mapping"
+  ],
+  "test_config_from_class": [
+    "Config.from_object",
+    "common_object_test"
+  ],
+  "test_config_from_envvar": [
+    "Config.from_envvar",
+    "common_object_test",
+    "Config.from_envvar",
+    "Config.from_envvar"
+  ],
+  "test_config_from_envvar_missing": [
+    "Config.from_envvar",
+    "Config.from_envvar"
+  ],
+  "test_config_missing": [
+    "Config.from_pyfile",
+    "Config.from_pyfile"
+  ],
+  "test_config_missing_file": [
+    "Config.from_file",
+    "Config.from_file"
+  ],
+  "test_custom_config_class": [
+    "Config.from_object",
+    "common_object_test"
+  ],
+  "test_get_namespace": [
+    "Config.get_namespace",
+    "Config.get_namespace",
+    "Config.get_namespace",
+    "Config.get_namespace"
+  ],
+  "test_from_pyfile_weird_encoding": [
+    "Config.from_pyfile"
+  ],
+  "test_error_handler_no_match": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.register_error_handler",
+    "Scaffold.register_error_handler",
+    "Scaffold.register_error_handler",
+    "abort"
+  ],
+  "custom_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "handle_500": [
+    "Scaffold.errorhandler"
+  ],
+  "custom_test": [
+    "Scaffold.route"
+  ],
+  "key_error": [
+    "Scaffold.route"
+  ],
+  "do_abort": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "test_error_handler_subclass": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "parent_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "child_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "parent_test": [
+    "Scaffold.route"
+  ],
+  "unregistered_test": [
+    "Scaffold.route"
+  ],
+  "registered_test": [
+    "Scaffold.route"
+  ],
+  "test_error_handler_http_subclass": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "code_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "subclass_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "forbidden_test": [
+    "Scaffold.route"
+  ],
+  "test_error_handler_blueprint": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "bp_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "bp_test": [
+    "Scaffold.route"
+  ],
+  "app_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "app_test": [
+    "Scaffold.route"
+  ],
+  "test_default_error_handler": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Flask.test_client"
+  ],
+  "bp_forbidden_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "bp_registered_test": [
+    "Scaffold.route"
+  ],
+  "bp_forbidden_test": [
+    "Scaffold.route"
+  ],
+  "catchall_exception_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "catchall_forbidden_handler": [
+    "Scaffold.errorhandler"
+  ],
+  "slash": [
+    "Scaffold.route"
+  ],
+  "TestGenericHandlers.app": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.route",
+    "abort"
+  ],
+  "TestGenericHandlers.do_custom": [
+    "Scaffold.route"
+  ],
+  "TestGenericHandlers.do_error": [
+    "Scaffold.route"
+  ],
+  "TestGenericHandlers.do_abort": [
+    "Scaffold.route",
+    "abort"
+  ],
+  "TestGenericHandlers.do_raise": [
+    "Scaffold.route"
+  ],
+  "TestGenericHandlers.test_handle_class_or_code": [
+    "Scaffold.errorhandler",
+    "TestGenericHandlers.report_error",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "TestGenericHandlers.handle_500": [
+    "Scaffold.errorhandler",
+    "TestGenericHandlers.report_error"
+  ],
+  "TestGenericHandlers.test_handle_generic_http": [
+    "Scaffold.errorhandler",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "TestGenericHandlers.handle_http": [
+    "Scaffold.errorhandler"
+  ],
+  "TestGenericHandlers.test_handle_generic": [
+    "Scaffold.errorhandler",
+    "TestGenericHandlers.report_error",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "TestGenericHandlers.handle_exception": [
+    "Scaffold.errorhandler",
+    "TestGenericHandlers.report_error"
+  ],
+  "test_redirect_no_app": [
+    "App.redirect"
+  ],
+  "test_redirect_with_app": [
+    "Flask.app_context",
+    "App.redirect"
+  ],
+  "test_abort_no_app": [
+    "abort",
+    "abort"
+  ],
+  "test_abort_with_app": [
+    "Flask.app_context",
+    "abort"
+  ],
+  "test_open_resource": [
+    "Flask.open_resource",
+    "read"
+  ],
+  "test_open_resource_exceptions": [
+    "Flask.open_resource"
+  ],
+  "test_open_resource_with_encoding": [
+    "Flask.open_resource",
+    "read"
+  ],
+  "TestSendfile.test_send_file": [
+    "Flask.open_resource",
+    "read",
+    "send_file"
+  ],
+  "TestSendfile.test_static_file": [
+    "Flask.send_static_file",
+    "send_file",
+    "Flask.send_static_file",
+    "send_file",
+    "Flask.send_static_file",
+    "Flask.test_request_context",
+    "Flask.send_static_file",
+    "send_file"
+  ],
+  "TestSendfile.test_send_from_directory": [
+    "send_from_directory"
+  ],
+  "TestUrlFor.test_url_for_with_anchor": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "TestUrlFor.index": [
+    "Scaffold.route"
+  ],
+  "TestUrlFor.test_url_for_with_scheme": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "TestUrlFor.test_url_for_with_scheme_not_external": [
+    "Scaffold.add_url_rule",
+    "url_for",
+    "url_for"
+  ],
+  "TestUrlFor.test_url_for_with_alternating_schemes": [
+    "Scaffold.route",
+    "url_for",
+    "url_for",
+    "url_for"
+  ],
+  "TestUrlFor.test_url_with_method": [
+    "View.as_view",
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "url_for",
+    "url_for",
+    "url_for"
+  ],
+  "TestUrlFor.test_url_for_with_self": [
+    "Scaffold.route",
+    "url_for"
+  ],
+  "TestStreaming.test_streaming_with_context": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "stream_with_context",
+    "generate"
+  ],
+  "TestStreaming.index": [
+    "Scaffold.route",
+    "TestStreaming.gen"
+  ],
+  "TestStreaming.test_streaming_with_context_as_decorator": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "generate"
+  ],
+  "TestStreaming.test_streaming_with_context_and_custom_close": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "stream_with_context",
+    "generate"
+  ],
+  "TestStreaming.test_stream_keeps_session": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "TestStreaming.gen"
+  ],
+  "TestStreaming.test_async_view": [
+    "Scaffold.route",
+    "Wrapper.close",
+    "Scaffold.get",
+    "Wrapper.close",
+    "Scaffold.get",
+    "TestStreaming.gen",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "TestHelpers.test_get_debug_flag": [
+    "get_debug_flag"
+  ],
+  "TestHelpers.test_make_response": [
+    "Flask.test_request_context",
+    "make_response",
+    "make_response"
+  ],
+  "test_bad_request_debug_message": [
+    "Scaffold.route",
+    "Scaffold.post"
+  ],
+  "post_json": [
+    "Scaffold.route"
+  ],
+  "test_json_bad_requests": [
+    "Scaffold.route",
+    "Scaffold.post",
+    "jsonify"
+  ],
+  "return_json": [
+    "Scaffold.route"
+  ],
+  "test_json_custom_mimetypes": [
+    "Scaffold.route",
+    "Scaffold.post"
+  ],
+  "test_json_as_unicode": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "test_json_dump_to_file": [
+    "dump",
+    "load"
+  ],
+  "test_jsonify_basic_types": [
+    "Scaffold.add_url_rule",
+    "Scaffold.get",
+    "TaggedJSONSerializer.loads",
+    "jsonify"
+  ],
+  "test_jsonify_dicts": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "jsonify",
+    "jsonify",
+    "Scaffold.get",
+    "TaggedJSONSerializer.loads"
+  ],
+  "return_kwargs": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "return_dict": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "test_jsonify_arrays": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "jsonify",
+    "jsonify",
+    "Scaffold.get",
+    "TaggedJSONSerializer.loads"
+  ],
+  "return_args_unpack": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "return_array": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "test_jsonify_datetime": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "jsonify"
+  ],
+  "test_jsonify_aware_datetimes": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "test_jsonify_uuid_types": [
+    "Scaffold.add_url_rule",
+    "Scaffold.get",
+    "TaggedJSONSerializer.loads",
+    "jsonify"
+  ],
+  "test_json_decimal": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "test_json_attr": [
+    "Scaffold.route",
+    "Scaffold.post",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "add": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get",
+    "jsonify"
+  ],
+  "test_tojson_filter": [
+    "render_template_string"
+  ],
+  "test_json_customization": [
+    "Scaffold.route",
+    "Scaffold.post",
+    "default",
+    "TaggedJSONSerializer.dumps",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.loads",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "default": [
+    "default"
+  ],
+  "test_json_key_sorting": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "jsonify"
+  ],
+  "test_html_method": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "CustomProvider.loads": [
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.loads"
+  ],
+  "test_find_best_app": [
+    "find_best_app",
+    "find_best_app",
+    "find_best_app",
+    "find_best_app",
+    "find_best_app",
+    "find_best_app",
+    "find_best_app",
+    "find_best_app"
+  ],
+  "test_prepare_import": [
+    "prepare_import"
+  ],
+  "test_locate_app": [
+    "locate_app"
+  ],
+  "test_locate_app_raises": [
+    "locate_app"
+  ],
+  "test_locate_app_suppress_raise": [
+    "locate_app",
+    "locate_app"
+  ],
+  "test_get_version": [
+    "get_version"
+  ],
+  "test_scriptinfo": [
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app",
+    "ScriptInfo.load_app"
+  ],
+  "test_app_cli_has_app_context": [
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "ScriptInfo.load_app",
+    "ProxyMixin._get_current_object"
+  ],
+  "check": [
+    "AppGroup.command",
+    "ScriptInfo.load_app",
+    "ProxyMixin._get_current_object"
+  ],
+  "test_with_appcontext": [
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "testcmd": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "test_appgroup_app_context": [
+    "AppGroup.group",
+    "AppGroup.command",
+    "AppGroup.group",
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "echo",
+    "echo"
+  ],
+  "cli": [
+    "AppGroup.group"
+  ],
+  "subgroup": [
+    "AppGroup.group"
+  ],
+  "test2": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "test_flaskgroup_app_context": [
+    "AppGroup.group",
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "test_flaskgroup_debug": [
+    "AppGroup.group",
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "test_flaskgroup_nested": [
+    "AppGroup.command",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "show": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "test_no_command_echo_loading_error": [
+    "FlaskCliRunner.invoke"
+  ],
+  "test_help_echo_loading_error": [
+    "FlaskCliRunner.invoke"
+  ],
+  "test_help_echo_exception": [
+    "FlaskCliRunner.invoke"
+  ],
+  "test_load_dotenv": [
+    "load_dotenv",
+    "load_dotenv"
+  ],
+  "test_dotenv_path": [
+    "load_dotenv"
+  ],
+  "test_dotenv_optional": [
+    "load_dotenv"
+  ],
+  "test_disable_dotenv_from_env": [
+    "FlaskCliRunner.invoke"
+  ],
+  "test_run_cert_path": [
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context"
+  ],
+  "test_run_cert_adhoc": [
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context"
+  ],
+  "test_run_cert_import": [
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context",
+    "FlaskGroup.make_context"
+  ],
+  "test_run_cert_no_ssl": [
+    "FlaskGroup.make_context"
+  ],
+  "test_cli_blueprints": [
+    "AppGroup.command",
+    "AppGroup.command",
+    "AppGroup.command",
+    "AppGroup.command",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "App.register_blueprint",
+    "Flask.test_cli_runner",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "echo",
+    "echo",
+    "echo"
+  ],
+  "custom_command": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "nested_command": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "merged_command": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "late_command": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "test_cli_empty": [
+    "App.register_blueprint",
+    "FlaskCliRunner.invoke",
+    "Flask.test_cli_runner"
+  ],
+  "test_run_exclude_patterns": [
+    "FlaskGroup.make_context"
+  ],
+  "TestRoutes.app": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule"
+  ],
+  "TestRoutes.test_simple": [
+    "FlaskCliRunner.invoke",
+    "TestRoutes.expect_order"
+  ],
+  "TestRoutes.test_sort": [
+    "TestRoutes.expect_order",
+    "TestRoutes.expect_order",
+    "TestRoutes.expect_order",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke"
+  ],
+  "TestRoutes.test_all_methods": [
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke"
+  ],
+  "TestRoutes.test_no_routes": [
+    "FlaskCliRunner.invoke"
+  ],
+  "TestRoutes.test_subdomain": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "FlaskCliRunner.invoke"
+  ],
+  "TestRoutes.test_host": [
+    "Scaffold.add_url_rule",
+    "Scaffold.add_url_rule",
+    "FlaskCliRunner.invoke"
+  ],
+  "test_original_win": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template_string"
+  ],
+  "test_simple_stream": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "stream_template_string"
+  ],
+  "test_request_less_rendering": [
+    "render_template_string"
+  ],
+  "test_standard_context": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template_string"
+  ],
+  "test_escaping": [
+    "Scaffold.route",
+    "render_template",
+    "Scaffold.get"
+  ],
+  "test_no_escaping": [
+    "Scaffold.route",
+    "render_template",
+    "Scaffold.get"
+  ],
+  "test_escaping_without_template_filename": [
+    "render_template_string",
+    "render_template"
+  ],
+  "test_macros": [
+    "get_template_attribute"
+  ],
+  "test_add_template_global": [
+    "App.template_global",
+    "render_template_string",
+    "render_template_string",
+    "App.template_global",
+    "render_template_string",
+    "App.template_global",
+    "render_template_string"
+  ],
+  "get_stuff": [
+    "App.template_global"
+  ],
+  "test_custom_template_loader": [
+    "Scaffold.route",
+    "Flask.test_client",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_iterable_loader": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "render_template"
+  ],
+  "test_templates_auto_reload_debug_run": [
+    "Flask.run",
+    "Flask.run"
+  ],
+  "test_template_loader_debugging": [
+    "Flask.test_client",
+    "Scaffold.get"
+  ],
+  "test_basic_url_generation": [
+    "Scaffold.route",
+    "Flask.app_context",
+    "url_for"
+  ],
+  "test_url_generation_requires_server_name": [
+    "Flask.app_context",
+    "url_for"
+  ],
+  "test_url_generation_without_context_fails": [
+    "url_for"
+  ],
+  "test_request_context_means_app_context": [
+    "Flask.test_request_context",
+    "ProxyMixin._get_current_object"
+  ],
+  "test_app_context_provides_current_app": [
+    "Flask.app_context",
+    "ProxyMixin._get_current_object"
+  ],
+  "test_app_tearing_down": [
+    "Flask.app_context"
+  ],
+  "test_app_tearing_down_with_previous_exception": [
+    "Flask.app_context"
+  ],
+  "test_app_tearing_down_with_handled_exception_by_except_block": [
+    "Flask.app_context"
+  ],
+  "test_app_tearing_down_with_handled_exception_by_app_handler": [
+    "Scaffold.route",
+    "Scaffold.errorhandler",
+    "jsonify",
+    "Flask.app_context",
+    "Scaffold.get"
+  ],
+  "handler": [
+    "Scaffold.errorhandler",
+    "jsonify"
+  ],
+  "test_app_tearing_down_with_unhandled_exception": [
+    "Scaffold.route",
+    "Flask.app_context",
+    "Scaffold.get"
+  ],
+  "test_app_ctx_globals_methods": [
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "Scaffold.get",
+    "Scaffold.get",
+    "AppContext.pop",
+    "AppContext.pop",
+    "AppContext.pop"
+  ],
+  "test_custom_app_ctx_globals_class": [
+    "Flask.app_context",
+    "render_template_string"
+  ],
+  "test_context_refcounts": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_clean_pop": [
+    "Flask.app_context"
+  ],
+  "test_robust_teardown": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_aborting": [
+    "Scaffold.errorhandler",
+    "Scaffold.route",
+    "Scaffold.route",
+    "abort",
+    "Flask.test_client",
+    "Scaffold.get",
+    "Scaffold.get",
+    "App.redirect",
+    "url_for"
+  ],
+  "handle_foo": [
+    "Scaffold.errorhandler"
+  ],
+  "test_environ_defaults_from_config": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "Scaffold.get"
+  ],
+  "test_environ_defaults": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "Scaffold.get"
+  ],
+  "test_environ_base_default": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_environ_base_modified": [
+    "Scaffold.route",
+    "Scaffold.get"
+  ],
+  "test_client_open_environ": [
+    "Scaffold.route",
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "test_specify_url_scheme": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "Scaffold.get"
+  ],
+  "test_environbuilder_json_dumps": [
+    "read"
+  ],
+  "test_blueprint_with_subdomain": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "Flask.test_request_context",
+    "Scaffold.get"
+  ],
+  "test_redirect_session": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "App.redirect",
+    "Scaffold.get"
+  ],
+  "test_session_transactions": [
+    "Scaffold.route",
+    "Scaffold.get",
+    "FlaskClient.session_transaction",
+    "FlaskClient.session_transaction"
+  ],
+  "test_session_transactions_no_null_sessions": [
+    "Flask.test_client",
+    "FlaskClient.session_transaction"
+  ],
+  "test_session_transactions_keep_context": [
+    "Scaffold.get",
+    "ProxyMixin._get_current_object",
+    "FlaskClient.session_transaction",
+    "ProxyMixin._get_current_object"
+  ],
+  "test_session_transaction_needs_cookies": [
+    "Flask.test_client",
+    "FlaskClient.session_transaction"
+  ],
+  "test_test_client_context_binding": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "other": [
+    "Scaffold.route"
+  ],
+  "test_reuse_client": [
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_full_url_request": [
+    "Scaffold.route",
+    "Scaffold.post"
+  ],
+  "action": [
+    "Scaffold.route"
+  ],
+  "test_json_request_and_response": [
+    "Scaffold.route",
+    "jsonify",
+    "Scaffold.post"
+  ],
+  "echo": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "test_client_json_no_app_context": [
+    "Scaffold.route",
+    "Scaffold.post"
+  ],
+  "test_subdomain": [
+    "Flask.test_client",
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "url_for",
+    "Scaffold.get"
+  ],
+  "test_nosubdomain": [
+    "Scaffold.route",
+    "Flask.test_request_context",
+    "url_for",
+    "Scaffold.get"
+  ],
+  "test_cli_runner_class": [
+    "Flask.test_cli_runner",
+    "Flask.test_cli_runner"
+  ],
+  "test_cli_invoke": [
+    "AppGroup.command",
+    "Flask.test_cli_runner",
+    "FlaskCliRunner.invoke",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "hello_command": [
+    "AppGroup.command",
+    "echo"
+  ],
+  "test_cli_custom_obj": [
+    "AppGroup.command",
+    "Flask.test_cli_runner",
+    "FlaskCliRunner.invoke",
+    "echo"
+  ],
+  "test_client_pop_all_preserved": [
+    "Scaffold.route",
+    "Wrapper.close",
+    "stream_with_context",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "hello_str": [
+    "Scaffold.route"
+  ],
+  "hello_bytes": [
+    "Scaffold.route"
+  ],
+  "hello_json": [
+    "Scaffold.route",
+    "jsonify"
+  ],
+  "hello_json_dict": [
+    "Scaffold.route"
+  ],
+  "hello_json_list": [
+    "Scaffold.route"
+  ],
+  "typed_dict": [
+    "Scaffold.route"
+  ],
+  "hello_generator": [
+    "Scaffold.route",
+    "show"
+  ],
+  "hello_generator_expression": [
+    "Scaffold.route"
+  ],
+  "hello_iterator": [
+    "Scaffold.route"
+  ],
+  "tuple_status": [
+    "Scaffold.route",
+    "Scaffold.route"
+  ],
+  "tuple_status_enum": [
+    "Scaffold.route"
+  ],
+  "tuple_headers": [
+    "Scaffold.route"
+  ],
+  "return_template": [
+    "Scaffold.route",
+    "Scaffold.route",
+    "render_template"
+  ],
+  "return_template_stream": [
+    "Scaffold.route",
+    "stream_template"
+  ],
+  "async_route": [
+    "Scaffold.route"
+  ],
+  "RenderTemplateView.dispatch_request": [
+    "render_template"
+  ],
+  "handle_400": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler"
+  ],
+  "handle_custom": [
+    "Scaffold.errorhandler"
+  ],
+  "handle_accept_base": [
+    "Scaffold.errorhandler"
+  ],
+  "handle_multiple": [
+    "Scaffold.errorhandler",
+    "Scaffold.errorhandler"
+  ],
+  "missing_template": [
+    "Scaffold.route",
+    "render_template"
+  ],
+  "runner": [
+    "Flask.test_cli_runner"
+  ],
+  "AuthActions.login": [
+    "Scaffold.post"
+  ],
+  "AuthActions.logout": [
+    "Scaffold.get"
+  ],
+  "test_register": [
+    "Scaffold.post",
+    "Flask.app_context",
+    "Scaffold.get",
+    "get_db"
+  ],
+  "test_register_validate_input": [
+    "Scaffold.post"
+  ],
+  "test_login": [
+    "login",
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "test_login_validate_input": [
+    "login"
+  ],
+  "test_logout": [
+    "login",
+    "logout"
+  ],
+  "test_get_close_db": [
+    "Flask.app_context",
+    "get_db",
+    "get_db"
+  ],
+  "test_init_db_command": [
+    "FlaskCliRunner.invoke"
+  ],
+  "test_config": [
+    "create_app",
+    "create_app"
+  ],
+  "test_hello": [
+    "Scaffold.get"
+  ],
+  "test_login_required": [
+    "Scaffold.post"
+  ],
+  "test_author_required": [
+    "login",
+    "Flask.app_context",
+    "get_db",
+    "Scaffold.post",
+    "Scaffold.post",
+    "Scaffold.get"
+  ],
+  "test_exists_required": [
+    "login",
+    "Scaffold.post"
+  ],
+  "test_create": [
+    "login",
+    "Scaffold.post",
+    "Flask.app_context",
+    "get_db",
+    "Scaffold.get"
+  ],
+  "test_update": [
+    "login",
+    "Scaffold.post",
+    "Flask.app_context",
+    "get_db",
+    "Scaffold.get"
+  ],
+  "test_create_update_validate": [
+    "login",
+    "Scaffold.post"
+  ],
+  "test_delete": [
+    "login",
+    "Scaffold.post",
+    "Flask.app_context",
+    "get_db"
+  ],
+  "login_required": [
+    "View.view",
+    "App.redirect",
+    "url_for"
+  ],
+  "wrapped_view": [
+    "View.view",
+    "App.redirect",
+    "url_for"
+  ],
+  "load_logged_in_user": [
+    "Scaffold.get",
+    "get_db"
+  ],
+  "register": [
+    "Scaffold.route",
+    "render_template",
+    "get_db",
+    "flash",
+    "App.redirect",
+    "url_for"
+  ],
+  "logout": [
+    "Scaffold.route",
+    "clear",
+    "App.redirect",
+    "url_for"
+  ],
+  "close_db": [
+    "AppContext.pop",
+    "Wrapper.close"
+  ],
+  "init_db": [
+    "get_db",
+    "Flask.open_resource",
+    "read"
+  ],
+  "init_db_command": [
+    "AppGroup.command",
+    "init_db",
+    "echo"
+  ],
+  "init_app": [
+    "App.teardown_appcontext"
+  ],
+  "create_app": [
+    "Config.from_mapping",
+    "Config.from_prefixed_env",
+    "celery_init_app",
+    "Scaffold.route",
+    "App.register_blueprint",
+    "render_template"
+  ],
+  "get_post": [
+    "abort",
+    "abort",
+    "get_db"
+  ],
+  "create": [
+    "Scaffold.route",
+    "render_template",
+    "flash",
+    "get_db",
+    "App.redirect",
+    "url_for"
+  ],
+  "update": [
+    "Scaffold.route",
+    "get_post",
+    "render_template",
+    "flash",
+    "get_db",
+    "App.redirect",
+    "url_for"
+  ],
+  "delete": [
+    "Scaffold.route",
+    "get_post",
+    "get_db",
+    "App.redirect",
+    "url_for"
+  ],
+  "celery_init_app": [
+    "Flask.app_context",
+    "Flask.run"
+  ],
+  "FlaskTask.__call__": [
+    "Flask.app_context",
+    "Flask.run"
+  ],
+  "result": [
+    "Scaffold.get",
+    "Scaffold.get"
+  ],
+  "block": [
+    "Scaffold.post"
+  ],
+  "process": [
+    "Scaffold.post",
+    "Scaffold.get"
+  ],
+  "test_add": [
+    "Scaffold.post"
+  ],
+  "create_logger": [
+    "has_level_handler"
+  ],
+  "SessionMixin.permanent": [
+    "Scaffold.get"
+  ],
+  "SecureCookieSession.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "SecureCookieSessionInterface.get_signing_serializer": [
+    "Blueprint.extend"
+  ],
+  "SecureCookieSessionInterface.open_session": [
+    "SecureCookieSessionInterface.get_signing_serializer",
+    "Scaffold.get",
+    "SessionInterface.get_cookie_name",
+    "TaggedJSONSerializer.loads"
+  ],
+  "SecureCookieSessionInterface.save_session": [
+    "SessionInterface.get_cookie_name",
+    "SessionInterface.get_cookie_domain",
+    "SessionInterface.get_cookie_path",
+    "SessionInterface.get_cookie_secure",
+    "SessionInterface.get_cookie_partitioned",
+    "SessionInterface.get_cookie_samesite",
+    "SessionInterface.get_cookie_httponly",
+    "SessionInterface.get_expiration_time",
+    "TaggedJSONSerializer.dumps",
+    "add",
+    "add",
+    "SessionInterface.should_set_cookie",
+    "add",
+    "SecureCookieSessionInterface.get_signing_serializer"
+  ],
+  "Config.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "Config.from_envvar": [
+    "Scaffold.get",
+    "Config.from_pyfile"
+  ],
+  "Config.from_prefixed_env": [
+    "TaggedJSONSerializer.loads"
+  ],
+  "Config.from_pyfile": [
+    "Config.from_object",
+    "FlaskClient.open",
+    "read"
+  ],
+  "Config.from_file": [
+    "Config.from_mapping",
+    "FlaskClient.open",
+    "load"
+  ],
+  "Config.from_mapping": [
+    "update",
+    "update"
+  ],
+  "Config.__repr__": [
+    "Scaffold.__repr__"
+  ],
+  "_default_template_ctx_processor": [
+    "ProxyMixin._get_current_object"
+  ],
+  "_render": [
+    "Flask.update_template_context"
+  ],
+  "render_template": [
+    "ProxyMixin._get_current_object",
+    "_render"
+  ],
+  "render_template_string": [
+    "ProxyMixin._get_current_object",
+    "_render"
+  ],
+  "_stream": [
+    "Flask.update_template_context",
+    "stream_with_context",
+    "generate",
+    "generate"
+  ],
+  "generate": [
+    "generate"
+  ],
+  "stream_template": [
+    "ProxyMixin._get_current_object",
+    "_stream"
+  ],
+  "stream_template_string": [
+    "ProxyMixin._get_current_object",
+    "_stream"
+  ],
+  "Environment.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "App.create_global_jinja_loader"
+  ],
+  "DispatchingJinjaLoader.get_source": [
+    "DispatchingJinjaLoader._get_source_fast",
+    "DispatchingJinjaLoader._get_source_explained"
+  ],
+  "DispatchingJinjaLoader._get_source_explained": [
+    "DispatchingJinjaLoader._iter_loaders",
+    "explain_template_loading_attempts",
+    "DispatchingJinjaLoader.get_source"
+  ],
+  "DispatchingJinjaLoader._get_source_fast": [
+    "DispatchingJinjaLoader._iter_loaders",
+    "DispatchingJinjaLoader.get_source"
+  ],
+  "DispatchingJinjaLoader._iter_loaders": [
+    "App.iter_blueprints"
+  ],
+  "DispatchingJinjaLoader.list_templates": [
+    "set",
+    "App.iter_blueprints",
+    "update",
+    "DispatchingJinjaLoader.list_templates",
+    "DispatchingJinjaLoader.list_templates",
+    "add"
+  ],
+  "Blueprint.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "Blueprint.send_static_file": [
+    "Flask.get_send_file_max_age",
+    "send_from_directory"
+  ],
+  "Blueprint.open_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "find_best_app": [
+    "_called_with_wrong_args"
+  ],
+  "find_app_by_string": [
+    "_called_with_wrong_args"
+  ],
+  "locate_app": [
+    "find_best_app",
+    "find_app_by_string"
+  ],
+  "get_version": [
+    "echo",
+    "MockCtx.exit"
+  ],
+  "with_appcontext": [
+    "FlaskCliRunner.invoke",
+    "ScriptInfo.load_app",
+    "Flask.app_context"
+  ],
+  "decorator": [
+    "stream_with_context"
+  ],
+  "_env_file_callback": [
+    "load_dotenv"
+  ],
+  "show_server_banner": [
+    "echo",
+    "echo"
+  ],
+  "_validate_key": [
+    "Scaffold.get"
+  ],
+  "run_command": [
+    "AppGroup.command",
+    "get_debug_flag",
+    "show_server_banner",
+    "ScriptInfo.load_app"
+  ],
+  "shell_command": [
+    "AppGroup.command",
+    "Scaffold.get",
+    "update",
+    "Flask.make_shell_context",
+    "FlaskClient.open",
+    "read"
+  ],
+  "routes_command": [
+    "AppGroup.command",
+    "echo",
+    "set",
+    "echo"
+  ],
+  "main": [
+    "main"
+  ],
+  "ScriptInfo.__init__": [
+    "get_load_dotenv"
+  ],
+  "ScriptInfo.load_app": [
+    "create_app",
+    "get_debug_flag",
+    "prepare_import",
+    "locate_app",
+    "prepare_import",
+    "locate_app"
+  ],
+  "AppGroup.command": [
+    "AppContext.pop",
+    "with_appcontext",
+    "AppGroup.command"
+  ],
+  "AppGroup.decorator": [
+    "with_appcontext",
+    "AppGroup.command"
+  ],
+  "AppGroup.group": [
+    "_AppCtxGlobals.setdefault",
+    "AppGroup.group"
+  ],
+  "FlaskGroup.__init__": [
+    "Blueprint.extend",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.__init__",
+    "AppContext.pop"
+  ],
+  "FlaskGroup._load_plugin_commands": [
+    "load"
+  ],
+  "FlaskGroup.get_command": [
+    "FlaskGroup._load_plugin_commands",
+    "FlaskGroup.get_command",
+    "FlaskGroup.get_command",
+    "ScriptInfo.load_app",
+    "ProxyMixin._get_current_object",
+    "Flask.app_context"
+  ],
+  "FlaskGroup.list_commands": [
+    "FlaskGroup._load_plugin_commands",
+    "set",
+    "FlaskGroup.list_commands",
+    "update",
+    "FlaskGroup.list_commands",
+    "ScriptInfo.load_app"
+  ],
+  "FlaskGroup.make_context": [
+    "FlaskGroup.make_context"
+  ],
+  "FlaskGroup.parse_args": [
+    "FlaskGroup.parse_args"
+  ],
+  "Request.blueprints": [
+    "_split_blueprint_path"
+  ],
+  "Request._load_form_data": [
+    "Request._load_form_data",
+    "attach_enctype_error_multidict"
+  ],
+  "Request.on_json_loading_failed": [
+    "Request.on_json_loading_failed"
+  ],
+  "add_ctx": [
+    "ProxyMixin._get_current_object",
+    "ProxyMixin._get_current_object"
+  ],
+  "wrapper": [
+    "Flask.ensure_sync"
+  ],
+  "Flask.__init_subclass__": [
+    "remove_ctx",
+    "add_ctx"
+  ],
+  "Flask.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "Scaffold.add_url_rule",
+    "Flask.send_static_file"
+  ],
+  "Flask.send_static_file": [
+    "Flask.get_send_file_max_age",
+    "send_from_directory"
+  ],
+  "Flask.open_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "Flask.open_instance_resource": [
+    "FlaskClient.open",
+    "FlaskClient.open"
+  ],
+  "Flask.create_jinja_environment": [
+    "update"
+  ],
+  "Flask.update_template_context": [
+    "AppContext.copy",
+    "update",
+    "update",
+    "Flask.ensure_sync"
+  ],
+  "Flask.make_shell_context": [
+    "update"
+  ],
+  "Flask.run": [
+    "get_load_dotenv",
+    "Scaffold.get",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "show_server_banner",
+    "Scaffold.get",
+    "load_dotenv",
+    "get_debug_flag"
+  ],
+  "Flask.handle_http_exception": [
+    "App._find_error_handler",
+    "Flask.ensure_sync"
+  ],
+  "Flask.handle_user_exception": [
+    "App._find_error_handler",
+    "Flask.handle_http_exception",
+    "Flask.ensure_sync",
+    "App.trap_http_exception"
+  ],
+  "Flask.handle_exception": [
+    "Flask.log_exception",
+    "App._find_error_handler",
+    "Flask.finalize_request",
+    "Flask.ensure_sync"
+  ],
+  "Flask.log_exception": [
+    "error"
+  ],
+  "Flask.dispatch_request": [
+    "Flask.raise_routing_exception",
+    "Flask.make_default_options_response",
+    "Flask.ensure_sync"
+  ],
+  "Flask.full_dispatch_request": [
+    "Flask.finalize_request",
+    "Flask.preprocess_request",
+    "MethodView.dispatch_request",
+    "Flask.handle_user_exception"
+  ],
+  "Flask.finalize_request": [
+    "make_response",
+    "Flask.process_response"
+  ],
+  "Flask.make_default_options_response": [
+    "update"
+  ],
+  "Flask.ensure_sync": [
+    "Flask.async_to_sync"
+  ],
+  "Flask.url_for": [
+    "App.inject_url_defaults",
+    "Flask.create_url_adapter",
+    "update",
+    "App.handle_url_build_error",
+    "Scaffold.get"
+  ],
+  "Flask.make_response": [
+    "update",
+    "DefaultJSONProvider.response"
+  ],
+  "Flask.preprocess_request": [
+    "Flask.ensure_sync"
+  ],
+  "Flask.process_response": [
+    "SessionInterface.is_null_session",
+    "SecureCookieSessionInterface.save_session",
+    "Flask.ensure_sync",
+    "AppContext._get_session",
+    "AppContext._get_session",
+    "Flask.ensure_sync"
+  ],
+  "Flask.do_teardown_request": [
+    "_CollectErrors.raise_any",
+    "Flask.ensure_sync"
+  ],
+  "Flask.do_teardown_appcontext": [
+    "_CollectErrors.raise_any",
+    "Flask.ensure_sync"
+  ],
+  "Flask.request_context": [
+    "AppContext.from_environ"
+  ],
+  "Flask.test_request_context": [
+    "Flask.request_context",
+    "Wrapper.close"
+  ],
+  "Flask.wsgi_app": [
+    "Flask.request_context",
+    "DefaultJSONProvider.response",
+    "AppContext.pop",
+    "AppContext.push",
+    "Flask.full_dispatch_request",
+    "Flask.handle_exception"
+  ],
+  "Flask.__call__": [
+    "Flask.wsgi_app"
+  ],
+  "attach_enctype_error_multidict": [
+    "newcls.__getitem__"
+  ],
+  "explain_template_loading_attempts": [
+    "_dump_loader_info",
+    "Scaffold.get"
+  ],
+  "FormDataRoutingRedirect.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "newcls.__getitem__": [
+    "newcls.__getitem__"
+  ],
+  "after_this_request": [
+    "Scaffold.get"
+  ],
+  "copy_current_request_context": [
+    "Scaffold.get",
+    "AppContext.copy",
+    "Flask.ensure_sync"
+  ],
+  "has_request_context": [
+    "Scaffold.get"
+  ],
+  "has_app_context": [
+    "Scaffold.get"
+  ],
+  "_AppCtxGlobals.get": [
+    "Scaffold.get"
+  ],
+  "_AppCtxGlobals.pop": [
+    "AppContext.pop",
+    "AppContext.pop"
+  ],
+  "_AppCtxGlobals.setdefault": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "_AppCtxGlobals.__repr__": [
+    "Scaffold.get",
+    "Scaffold.__repr__"
+  ],
+  "AppContext.__init__": [
+    "Flask.create_url_adapter"
+  ],
+  "AppContext._get_session": [
+    "SecureCookieSessionInterface.open_session",
+    "SessionInterface.make_null_session"
+  ],
+  "AppContext.session": [
+    "AppContext._get_session"
+  ],
+  "AppContext.push": [
+    "set",
+    "AppContext._get_session",
+    "AppContext.match_request"
+  ],
+  "AppContext.pop": [
+    "Scaffold.get",
+    "_CollectErrors.raise_any",
+    "Flask.do_teardown_appcontext",
+    "Flask.do_teardown_request",
+    "Wrapper.close"
+  ],
+  "AppContext.__enter__": [
+    "AppContext.push"
+  ],
+  "AppContext.__exit__": [
+    "AppContext.pop"
+  ],
+  "EnvironBuilder.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "Scaffold.get"
+  ],
+  "EnvironBuilder.json_dumps": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "FlaskClient.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "_get_werkzeug_version"
+  ],
+  "FlaskClient.session_transaction": [
+    "Flask.test_request_context",
+    "SessionInterface.is_null_session",
+    "SecureCookieSessionInterface.open_session",
+    "SecureCookieSessionInterface.save_session"
+  ],
+  "FlaskClient._request_from_builder_args": [
+    "FlaskClient._copy_environ",
+    "Scaffold.get",
+    "Wrapper.close"
+  ],
+  "FlaskClient.open": [
+    "Wrapper.close",
+    "FlaskClient.open",
+    "clear",
+    "FlaskClient._request_from_builder_args",
+    "AppContext.copy",
+    "FlaskClient._copy_environ",
+    "AppContext.copy",
+    "FlaskClient._copy_environ",
+    "AppContext.from_environ",
+    "FlaskClient._copy_environ"
+  ],
+  "FlaskClient.__exit__": [
+    "Wrapper.close"
+  ],
+  "FlaskCliRunner.__init__": [
+    "TaggedJSONSerializer.__init__"
+  ],
+  "FlaskCliRunner.invoke": [
+    "FlaskCliRunner.invoke"
+  ],
+  "get_debug_flag": [
+    "Scaffold.get"
+  ],
+  "get_load_dotenv": [
+    "Scaffold.get"
+  ],
+  "stream_with_context": [
+    "generator",
+    "stream_with_context",
+    "Scaffold.get",
+    "Wrapper.close"
+  ],
+  "generator": [
+    "Scaffold.get",
+    "Wrapper.close"
+  ],
+  "make_response": [
+    "make_response"
+  ],
+  "url_for": [
+    "url_for"
+  ],
+  "redirect": [
+    "App.redirect",
+    "Scaffold.get"
+  ],
+  "abort": [
+    "Scaffold.get"
+  ],
+  "flash": [
+    "Scaffold.get",
+    "ProxyMixin._get_current_object"
+  ],
+  "get_flashed_messages": [
+    "AppContext.pop"
+  ],
+  "_prepare_send_file_kwargs": [
+    "ProxyMixin._get_current_object",
+    "update",
+    "Scaffold.get"
+  ],
+  "send_file": [
+    "send_file",
+    "_prepare_send_file_kwargs"
+  ],
+  "send_from_directory": [
+    "send_from_directory",
+    "_prepare_send_file_kwargs"
+  ],
+  "get_root_path": [
+    "Scaffold.get"
+  ],
+  "_split_blueprint_path": [
+    "Blueprint.extend",
+    "_split_blueprint_path"
+  ],
+  "View.as_view": [
+    "Scaffold.decorator",
+    "Flask.ensure_sync",
+    "Flask.ensure_sync"
+  ],
+  "View.view": [
+    "Flask.ensure_sync"
+  ],
+  "MethodView.__init_subclass__": [
+    "MethodView.__init_subclass__",
+    "set",
+    "update",
+    "add"
+  ],
+  "MethodView.dispatch_request": [
+    "Flask.ensure_sync"
+  ],
+  "BlueprintSetupState.__init__": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "Scaffold.get",
+    "update",
+    "Scaffold.get"
+  ],
+  "BlueprintSetupState.add_url_rule": [
+    "_AppCtxGlobals.setdefault",
+    "Scaffold.add_url_rule",
+    "_endpoint_from_view_func",
+    "AppContext.pop"
+  ],
+  "Blueprint.record_once": [
+    "Blueprint.record"
+  ],
+  "Blueprint.register": [
+    "Scaffold.get",
+    "Scaffold.get",
+    "Blueprint.make_setup_state",
+    "Scaffold.get",
+    "Scaffold.add_url_rule",
+    "Blueprint._merge_blueprint_funcs",
+    "AppContext.copy",
+    "Scaffold.get",
+    "Scaffold.get",
+    "TaggedJSONSerializer.register",
+    "update"
+  ],
+  "Blueprint._merge_blueprint_funcs": [
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend",
+    "Blueprint.extend"
+  ],
+  "Blueprint.extend": [
+    "Blueprint.extend"
+  ],
+  "Blueprint.add_url_rule": [
+    "Blueprint.record",
+    "Scaffold.add_url_rule"
+  ],
+  "Blueprint.app_template_filter": [
+    "Blueprint.add_app_template_filter",
+    "Blueprint.add_app_template_filter"
+  ],
+  "Blueprint.decorator": [
+    "Blueprint.record_once",
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.add_app_template_filter": [
+    "Blueprint.record_once",
+    "App.add_template_filter"
+  ],
+  "Blueprint.register_template_filter": [
+    "App.add_template_filter"
+  ],
+  "Blueprint.app_template_test": [
+    "Blueprint.add_app_template_test",
+    "Blueprint.add_app_template_test"
+  ],
+  "Blueprint.add_app_template_test": [
+    "Blueprint.record_once",
+    "App.add_template_test"
+  ],
+  "Blueprint.register_template_test": [
+    "App.add_template_test"
+  ],
+  "Blueprint.app_template_global": [
+    "Blueprint.add_app_template_global",
+    "Blueprint.add_app_template_global"
+  ],
+  "Blueprint.add_app_template_global": [
+    "Blueprint.record_once",
+    "App.add_template_global"
+  ],
+  "Blueprint.register_template_global": [
+    "App.add_template_global"
+  ],
+  "Blueprint.before_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.after_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.teardown_app_request": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_context_processor": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_errorhandler": [
+    "Blueprint.record_once",
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.from_blueprint": [
+    "Scaffold.errorhandler"
+  ],
+  "Blueprint.app_url_value_preprocessor": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Blueprint.app_url_defaults": [
+    "Blueprint.record_once",
+    "_AppCtxGlobals.setdefault"
+  ],
+  "App.__init__": [
+    "TaggedJSONSerializer.__init__",
+    "App.make_config",
+    "App.make_aborter",
+    "App.auto_find_instance_path"
+  ],
+  "App.logger": [
+    "create_logger"
+  ],
+  "App.jinja_env": [
+    "App.create_jinja_environment"
+  ],
+  "App.make_config": [
+    "get_debug_flag"
+  ],
+  "App.auto_find_instance_path": [
+    "find_package"
+  ],
+  "App.register_blueprint": [
+    "TaggedJSONSerializer.register"
+  ],
+  "App.add_url_rule": [
+    "AppContext.pop",
+    "set",
+    "add",
+    "_endpoint_from_view_func",
+    "add",
+    "Scaffold.get"
+  ],
+  "App.template_filter": [
+    "App.add_template_filter",
+    "App.add_template_filter"
+  ],
+  "App.decorator": [
+    "App.add_template_global"
+  ],
+  "App.template_test": [
+    "App.add_template_test",
+    "App.add_template_test"
+  ],
+  "App.template_global": [
+    "App.add_template_global",
+    "App.add_template_global"
+  ],
+  "App._find_error_handler": [
+    "Scaffold._get_exc_class_and_code",
+    "Scaffold.get"
+  ],
+  "App.inject_url_defaults": [
+    "_split_blueprint_path"
+  ],
+  "App.handle_url_build_error": [
+    "handler"
+  ],
+  "setupmethod": [
+    "Scaffold._check_setup_finished"
+  ],
+  "wrapper_func": [
+    "Scaffold._check_setup_finished"
+  ],
+  "find_package": [
+    "_find_package_path"
+  ],
+  "Scaffold.__init__": [
+    "get_root_path"
+  ],
+  "Scaffold._method_route": [
+    "Scaffold.route"
+  ],
+  "Scaffold.get": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.post": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.put": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.delete": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.patch": [
+    "Scaffold._method_route"
+  ],
+  "Scaffold.route": [
+    "AppContext.pop",
+    "Scaffold.add_url_rule"
+  ],
+  "Scaffold.decorator": [
+    "Scaffold.register_error_handler"
+  ],
+  "Scaffold.before_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.after_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.teardown_request": [
+    "_AppCtxGlobals.setdefault"
+  ],
+  "Scaffold.errorhandler": [
+    "Scaffold.register_error_handler"
+  ],
+  "Scaffold.register_error_handler": [
+    "Scaffold._get_exc_class_and_code"
+  ],
+  "_default": [
+    "ObjectWithHTML.__html__"
+  ],
+  "JSONProvider.dump": [
+    "TaggedJSONSerializer.dumps"
+  ],
+  "JSONProvider.load": [
+    "TaggedJSONSerializer.loads",
+    "read"
+  ],
+  "JSONProvider.response": [
+    "JSONProvider._prepare_response_obj",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "DefaultJSONProvider.dumps": [
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "DefaultJSONProvider.loads": [
+    "TaggedJSONSerializer.loads"
+  ],
+  "DefaultJSONProvider.response": [
+    "JSONProvider._prepare_response_obj",
+    "_AppCtxGlobals.setdefault",
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "dumps": [
+    "_AppCtxGlobals.setdefault",
+    "TaggedJSONSerializer.dumps",
+    "TaggedJSONSerializer.dumps"
+  ],
+  "dump": [
+    "dump",
+    "_AppCtxGlobals.setdefault",
+    "dump"
+  ],
+  "loads": [
+    "TaggedJSONSerializer.loads",
+    "TaggedJSONSerializer.loads"
+  ],
+  "load": [
+    "load",
+    "load"
+  ],
+  "jsonify": [
+    "DefaultJSONProvider.response"
+  ],
+  "JSONTag.tag": [
+    "TagDateTime.to_json"
+  ],
+  "TagDict.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "PassDict.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "TagTuple.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "PassList.to_json": [
+    "TaggedJSONSerializer.tag"
+  ],
+  "TagMarkup.to_json": [
+    "ObjectWithHTML.__html__"
+  ],
+  "TaggedJSONSerializer.__init__": [
+    "TaggedJSONSerializer.register"
+  ],
+  "TaggedJSONSerializer.tag": [
+    "TagDateTime.check",
+    "TaggedJSONSerializer.tag"
+  ],
+  "TaggedJSONSerializer.untag": [
+    "TagDateTime.to_python"
+  ],
+  "TaggedJSONSerializer._untag_scan": [
+    "TaggedJSONSerializer.untag",
+    "TaggedJSONSerializer._untag_scan",
+    "TaggedJSONSerializer._untag_scan"
+  ],
+  "TaggedJSONSerializer.dumps": [
+    "TaggedJSONSerializer.dumps",
+    "TaggedJSONSerializer.tag"
+  ],
+  "TaggedJSONSerializer.loads": [
+    "TaggedJSONSerializer._untag_scan",
+    "TaggedJSONSerializer.loads"
+  ]
+}
