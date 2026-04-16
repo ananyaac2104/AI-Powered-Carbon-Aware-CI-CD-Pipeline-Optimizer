@@ -19,3 +19,6 @@ model_cache/
 
 # Mac specific
 .DS_Store
+venv/
+__pycache__/
+*.pyc
