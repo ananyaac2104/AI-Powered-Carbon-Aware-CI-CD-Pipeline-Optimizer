@@ -42,6 +42,7 @@ from typing import Optional
 
 import pandas as pd
 import numpy as np
+from src import config
 
 logging.basicConfig(
     level=logging.INFO,
@@ -403,9 +404,10 @@ def store_in_sqlite(
 # SECTION 4 — CARBON ESTIMATOR (reads from SQLite)
 # ─────────────────────────────────────────────────────────────────────────────
 
-CPU_FREQUENCY_GHZ = 3.0
-CPU_TDP_WATTS     = 15.0
-JOULES_TO_KWH     = 1 / 3_600_000
+# Move these to src/config.py
+CPU_FREQUENCY_GHZ = config.CPU_FREQUENCY_GHZ
+CPU_TDP_WATTS     = config.CPU_TDP_WATTS
+JOULES_TO_KWH     = config.JOULES_TO_KWH
 
 OPERATION_COSTS = {
     "function_call":     10,
@@ -569,11 +571,11 @@ class IndiaDatacenterCarbonEstimator:
 
     def __init__(
         self,
-        db_path:       str = "greenops.db",
+        db_path:       str = config.GREENOPS_DB,
         provider:      str = "aws",
         region:        Optional[str] = None,   # city name e.g. "Mumbai", "Chennai"
-        cpu_tdp_watts: float = CPU_TDP_WATTS,
-        cpu_ghz:       float = CPU_FREQUENCY_GHZ,
+        cpu_tdp_watts: float = config.CPU_TDP_WATTS,
+        cpu_ghz:       float = config.CPU_FREQUENCY_GHZ,
         year:          int = 2024,
     ):
         self.db_path       = db_path

@@ -3,3 +3,5 @@ xgboost
 scikit-learn
 pandas
 openai
+requests
+PyGithub

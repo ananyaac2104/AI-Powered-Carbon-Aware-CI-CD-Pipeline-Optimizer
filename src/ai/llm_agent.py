@@ -59,6 +59,7 @@ Dependencies:
 """
 
 import json
+from src import config
 import logging
 import os
 from pathlib import Path
@@ -79,11 +80,11 @@ logging.basicConfig(
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 
-ANTHROPIC_MODEL        = "claude-sonnet-4-20250514"
-EMBEDDING_SIM_THRESHOLD = float(os.environ.get("EMBEDDING_SIM_THRESHOLD", "0.72"))
-PRESUBMIT_CSV          = os.environ.get("PRESUBMIT_CSV",  "presubmit_clean.csv")
-POSTSUBMIT_CSV         = os.environ.get("POSTSUBMIT_CSV", "postsubmit_clean.csv")
-OUTPUT_DIR             = Path(os.environ.get("GREENOPS_OUTPUT", "./greenops_output"))
+ANTHROPIC_MODEL        = config.ANTHROPIC_MODEL
+EMBEDDING_SIM_THRESHOLD = config.EMBEDDING_SIM_THRESHOLD
+PRESUBMIT_CSV          = config.PRESUBMIT_CSV
+POSTSUBMIT_CSV         = config.POSTSUBMIT_CSV
+OUTPUT_DIR             = config.OUTPUT_DIR
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Column names in the Kaggle telemetry CSVs that identify a test uniquely
@@ -841,6 +842,26 @@ class LLMImpactAnalyzer:
         self.sim_threshold  = sim_threshold
         self.max_transitive = max_transitive
 
+    def decide(self, similarity, carbon_intensity):
+        """
+        Carbon-aware AI decision refinement.
+        Legacy API expected by decision_engine.py
+        Returns 'RUN_TEST' or 'SKIP_TEST'.
+        """
+        # If the code similarity is significant (>0.7), we should probably run tests
+        # regardless of carbon intensity to avoid regression risk.
+        if (float(similarity) if similarity is not None else 0.0) > 0.7:
+            return "RUN_TEST"
+
+        # If carbon intensity is high, we skip the test to save energy.
+        if (float(carbon_intensity) if carbon_intensity is not None else 0.0) > config.DIRTY_GRID_THRESHOLD and \
+           (float(similarity) if similarity is not None else 0.0) < config.SIMILARITY_THRESHOLD:
+            return "SKIP_TEST"
+
+        # Default to running tests for safety
+        return "RUN_TEST"
+
+
     def analyze_impact(
         self,
         changed_modules:  list[dict],
@@ -1074,3 +1095,5 @@ if __name__ == "__main__":
               f"conf={item['confidence']:.2f}  depth={item['transitive_depth']}  "
               f"run={item['should_run_tests']}")
         print(f"      → {item['explanation']}")
+
+LLMAgent = LLMImpactAnalyzer

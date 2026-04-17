@@ -327,6 +327,12 @@ def _parse_java_regex(source_code: str, file_path: str) -> FileAST:
 # ─────────────────────────────────────────────────────────────────────────────
 # MAIN AST PARSER CLASS
 # ─────────────────────────────────────────────────────────────────────────────
+def parse_file(filepath: str, repo_root: str = "."):
+    """Module-level entry point for dynamic integration."""
+    parser = ASTParser(repo_root=repo_root)
+    # Convert FileAST object to dict for JSON compatibility in integration
+    result = parser.parse_file(filepath)
+    return result.to_dict()
 
 class ASTParser:
     """
