@@ -29,6 +29,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from src import config
 
 warnings.filterwarnings("ignore")
 
@@ -39,7 +40,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("greenops.preprocess")
 
-OUTPUT_DIR = Path("./greenops_output")
+OUTPUT_DIR = config.OUTPUT_DIR
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -338,8 +339,8 @@ def combine_datasets(pre_df: pd.DataFrame, post_df: pd.DataFrame) -> pd.DataFram
 
     # Ground truth label for XGBoost Pf model
     combined["regression_detected"] = (
-        (combined["pass_rate_pre"]  >= 0.8) &   # was passing pre-submit
-        (combined["pass_rate_post"] <  0.5)      # now failing post-submit
+        (combined["pass_rate_pre"]  >= config.MIN_PASS_RATE_PRE) &   # using config
+        (combined["pass_rate_post"] <  config.MAX_PASS_RATE_POST)      # using config
     ).astype(int)
 
     combined["only_in_pre"]  = combined["pass_rate_post"].isna().astype(int)

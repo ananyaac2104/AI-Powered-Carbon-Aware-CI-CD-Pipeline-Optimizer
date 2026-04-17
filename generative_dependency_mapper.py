@@ -38,7 +38,8 @@ class PipelineInput:
     changed_functions: List[str]
     similarity_scores: Dict[Tuple[str, str], float]
     embeddings: Dict[str, List[float]] = field(default_factory=dict)
-    similarity_threshold: float = 0.5
+    from src import config
+    similarity_threshold: float = config.SIMILARITY_THRESHOLD
 
 
 @dataclass

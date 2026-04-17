@@ -60,7 +60,9 @@ MODEL_NAME      = "microsoft/graphcodebert-base"
 EMBEDDING_DIM   = 768          # GraphCodeBERT hidden size
 MAX_TOKEN_LEN   = 512          # Maximum token length (model constraint)
 BATCH_SIZE      = 16           # Number of snippets per forward pass
-SIMILARITY_THRESHOLD = 0.75    # Min cosine similarity to consider a test "relevant"
+from src import config
+
+SIMILARITY_THRESHOLD = config.SIMILARITY_THRESHOLD    # Min cosine similarity to consider a test "relevant"
 
 
 # ─────────────────────────────────────────────────────────────────────────────

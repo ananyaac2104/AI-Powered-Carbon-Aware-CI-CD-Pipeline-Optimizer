@@ -31,11 +31,8 @@ Usage:
     schedule  = scheduler.schedule(pruning_decision, test_operation_counts)
 """
 
-import json
-import logging
-import os
-import sqlite3
-import time
+from src import config
+from src.carbon_api_client import CarbonAPIClient
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Optional
@@ -47,22 +44,19 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CONFIGURATION
-# ─────────────────────────────────────────────────────────────────────────────
-
+# Move these to src/config.py
 DEFAULT_PROVIDER     = os.environ.get("GREENOPS_PROVIDER", "aws").lower()
-GREENOPS_DB          = os.environ.get("GREENOPS_DB", "greenops.db")
-OUTPUT_DIR           = Path(os.environ.get("GREENOPS_OUTPUT", "./greenops_output"))
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+GREENOPS_DB          = config.GREENOPS_DB
+OUTPUT_DIR           = config.OUTPUT_DIR
 
 # Operation thresholds for scheduling tiers
-LIGHT_OPS_THRESHOLD  =   5_000   # < 5K ops  → light test, always schedule now
-MEDIUM_OPS_THRESHOLD =  50_000   # < 50K ops → medium test
-HEAVY_OPS_THRESHOLD  = 200_000   # > 200K ops → heavy test, consider deferral
+LIGHT_OPS_THRESHOLD  = config.LIGHT_OPS_THRESHOLD
+MEDIUM_OPS_THRESHOLD = config.MEDIUM_OPS_THRESHOLD
+HEAVY_OPS_THRESHOLD  = config.HEAVY_OPS_THRESHOLD
 
 # Carbon score above which we defer heavy tests to off-peak
-DEFER_CARBON_SCORE   = 0.65      # normalized intensity / 900 > 0.65 → defer heavy
+DEFER_CARBON_SCORE   = config.DEFER_CARBON_SCORE
+DEFAULT_ZONE         = config.DEFAULT_ZONE
 
 # Ember 2024 fallback intensities (gCO2/kWh) if DB not available
 # Source: Ember Global Electricity Review 2024, CC BY 4.0
@@ -98,9 +92,9 @@ OPERATION_COSTS = {
     "boolean_op": 2, "subscript": 3, "attribute_access": 4, "augmented_assign": 2,
 }
 
-CPU_GHZ       = 3.0
-CPU_TDP_WATTS = 15.0
-JOULES_TO_KWH = 1 / 3_600_000
+CPU_GHZ       = config.CPU_FREQUENCY_GHZ
+CPU_TDP_WATTS = config.CPU_TDP_WATTS
+JOULES_TO_KWH = config.JOULES_TO_KWH
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -163,8 +157,9 @@ class DatacenterIntensityLoader:
     Falls back to Ember 2024 hardcoded values if DB is missing.
     """
 
-    def __init__(self, db_path: str = GREENOPS_DB):
+    def __init__(self, db_path: str = GREENOPS_DB, api_key: Optional[str] = config.ELECTRICITY_MAPS_API_KEY):
         self.db_path = db_path
+        self.api_client = CarbonAPIClient(api_key)
         self._conn   = None
 
     def _get_conn(self) -> Optional[sqlite3.Connection]:
@@ -208,26 +203,28 @@ class DatacenterIntensityLoader:
         return [o for o in all_opts if o.provider == provider.lower()]
 
     def _get_intensity(self, conn, state: str, year: int) -> float:
-        """Get intensity for a state from DB, or use fallback."""
-        if conn is None:
-            # Fallback: use Maharashtra value (most DCs are here)
-            fallback_map = {
-                "Maharashtra": 659.0, "Telangana": 679.9,
-                "Tamil Nadu":  493.2, "Delhi":     421.0,
-            }
-            return fallback_map.get(state, 659.0)
+        """Get intensity for a state. Try API -> DB -> Fallback map."""
+        
+        # 1. Try Electricity Maps API (if zone available)
+        # We need a mapping from state to zone, for now we assume config.DEFAULT_ZONE if it's Maharashtra
+        if state == "Maharashtra" and self.api_client.is_available():
+            api_data = self.api_client.get_latest_intensity(config.DEFAULT_ZONE)
+            if api_data:
+                return float(api_data["carbonIntensity"])
 
-        try:
-            row = conn.execute("""
-                SELECT co2_intensity_gco2_kwh FROM state_carbon_intensity
-                WHERE state = ? AND year = ?
-            """, (state, year)).fetchone()
-            if row:
-                return float(row["co2_intensity_gco2_kwh"])
-        except sqlite3.OperationalError:
-            pass
+        # 2. Try DB
+        if conn is not None:
+            try:
+                row = conn.execute("""
+                    SELECT co2_intensity_gco2_kwh FROM state_carbon_intensity
+                    WHERE state = ? AND year = ?
+                """, (state, year)).fetchone()
+                if row:
+                    return float(row["co2_intensity_gco2_kwh"])
+            except Exception:
+                pass
 
-        # Fallback if table not present
+        # 3. Fallback Map
         fallback_map = {
             "Maharashtra": 659.0, "Telangana": 679.9,
             "Tamil Nadu":  493.2, "Delhi":     421.0,
