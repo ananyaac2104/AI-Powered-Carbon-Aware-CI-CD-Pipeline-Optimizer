@@ -1,0 +1,43 @@
+# Green-Ops CI/CD Framework — Full Production Dependencies
+# =========================================================
+# Install: pip install -r requirements.txt
+#
+# For CPU-only PyTorch (CI-efficient, ~500MB vs 2GB GPU build):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+
+# ── Core ML ────────────────────────────────────────────────────────────────
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+xgboost>=2.0
+scipy>=1.11           # cosine similarity, distance metrics
+
+# ── Embeddings (Open-Source — No Paid API) ─────────────────────────────────
+transformers>=4.40    # CodeBERT, GraphCodeBERT, UniXcoder
+torch>=2.0            # CPU or GPU — see note above
+# sentence-transformers>=2.5  # Optional: faster sentence-level embeddings
+
+# ── Storage ────────────────────────────────────────────────────────────────
+# sqlite3 is built into Python (no install needed)
+boto3>=1.34           # AWS S3 embedding store (optional — set GREENOPS_S3_BUCKET)
+
+# ── AST Parsing ────────────────────────────────────────────────────────────
+javalang>=0.13        # Java AST support (optional — regex fallback if missing)
+
+# ── GitHub Integration ─────────────────────────────────────────────────────
+requests>=2.31
+PyGithub>=2.1
+
+# ── LLM Providers (install at least one if using LLM graph enrichment) ─────
+anthropic>=0.25       # Claude (primary — no demo values injected)
+# openai>=1.10        # GPT-4o-mini fallback
+# google-generativeai>=0.5  # Gemini fallback
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest>=7.4
+pytest-cov>=4.1       # Coverage reporting
+
+# ── Frontend API ────────────────────────────────────────────────────────────
+fastapi>=0.104
+uvicorn[standard]>=0.24

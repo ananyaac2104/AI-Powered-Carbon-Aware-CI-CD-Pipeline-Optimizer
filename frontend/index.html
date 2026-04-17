@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenOps — AI Carbon-Aware CI/CD Pipeline Optimizer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="https://unpkg.com/vis-network@9.1.2/dist/vis-network.min.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <div class="logo-section">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">
+          <h1>GreenOps</h1>
+          <p>Carbon-Aware CI/CD</p>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><button class="nav-item active" data-page="dashboard">📊 Dashboard</button></li>
+        <li><button class="nav-item" data-page="dependency">🔗 Dependencies</button></li>
+        <li><button class="nav-item" data-page="carbon">🌍 Carbon Intel</button></li>
+        <li><button class="nav-item" data-page="ml">🤖 ML Gatekeeper</button></li>
+        <li><button class="nav-item" data-page="cicd">⚙️ CI/CD</button></li>
+      </ul>
+      <div class="sidebar-footer"><p>v1.0 Production</p></div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- CONTROL PANEL -->
+      <header class="control-panel">
+        <div class="panel-section">
+          <h2>Pipeline Configuration</h2>
+          <div class="control-grid">
+            <div class="control-group">
+              <label>Repo (owner/repo)</label>
+              <input type="text" id="repo-input" placeholder="e.g., myorg/myrepo" class="input-field" />
+            </div>
+            <div class="control-group">
+              <label>PR Number</label>
+              <input type="number" id="pr-input" placeholder="0 for local" min="0" value="0" class="input-field" />
+            </div>
+            <div class="control-group">
+              <label>Base Branch</label>
+              <input type="text" id="base-input" placeholder="main" value="main" class="input-field" />
+            </div>
+            <div class="control-group">
+              <label>Upload Diff (.diff/.patch)</label>
+              <input type="file" id="diff-upload" accept=".diff,.patch" class="input-field" />
+            </div>
+            <div class="control-group">
+              <label>Region / Carbon Zone</label>
+              <select id="region-select" class="input-field">
+                <option value="IN-SO">India (Southern)</option>
+                <option value="IN-NO">India (Northern)</option>
+                <option value="US-CAL-CISO">US (California)</option>
+                <option value="US-NW-PACW">US (Pacific)</option>
+                <option value="GB">UK</option>
+                <option value="EU-WE">Europe (West)</option>
+                <option value="default" selected>Auto-detect</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label>Carbon Threshold (gCO₂/kWh)</label>
+              <input type="number" id="carbon-threshold-input" placeholder="500" value="500" min="0" class="input-field" />
+            </div>
+          </div>
+          <button id="run-button" class="btn-primary btn-large"><span class="btn-icon">▶</span><span class="btn-text">Run Pipeline</span></button>
+        </div>
+        <div class="status-indicator">
+          <div class="status-dot" id="status-dot"></div>
+          <span id="status-text">Ready</span>
+          <div id="status-loader" class="spinner" style="display: none;"></div>
+        </div>
+      </header>
+
+      <!-- PAGE 1: DASHBOARD -->
+      <div class="page" id="page-dashboard" data-page="dashboard">
+        <h2 class="page-title">Dashboard</h2>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Final Decision</div><div class="metric-value" id="dashboard-decision">—</div><div class="metric-description">Selection Strategy</div></div>
+          <div class="metric-card"><div class="metric-label">Probability of Failure</div><div class="metric-value metric-pf" id="dashboard-pf">—</div><div class="metric-description">XGBoost Prediction</div></div>
+          <div class="metric-card"><div class="metric-label">Carbon Intensity</div><div class="metric-value metric-carbon" id="dashboard-carbon">—</div><div class="metric-description">Current Grid</div></div>
+          <div class="metric-card"><div class="metric-label">Tests Saved</div><div class="metric-value metric-saved" id="dashboard-saved">—</div><div class="metric-description">Pruned Count</div></div>
+          <div class="metric-card"><div class="metric-label">Runtime Reduction</div><div class="metric-value metric-runtime" id="dashboard-runtime">—</div><div class="metric-description">Time Saved</div></div>
+          <div class="metric-card"><div class="metric-label">Status</div><div class="metric-value metric-status" id="dashboard-status">idle</div><div class="metric-description">Pipeline State</div></div>
+        </div>
+        <div class="chart-container"><h3>Pipeline Stage Timing (ms)</h3><canvas id="pipeline-chart"></canvas></div>
+      </div>
+
+      <!-- PAGE 2: DEPENDENCY -->
+      <div class="page" id="page-dependency" data-page="dependency">
+        <h2 class="page-title">Dependency Mapper & Impact Analysis</h2>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Changed Files</div><div class="metric-value" id="dep-files-count">—</div><div class="metric-description">From Diff</div></div>
+          <div class="metric-card"><div class="metric-label">Changed Functions</div><div class="metric-value" id="dep-functions-count">—</div><div class="metric-description">AST Parsed</div></div>
+          <div class="metric-card"><div class="metric-label">Impacted Tests</div><div class="metric-value" id="dep-tests-count">—</div><div class="metric-description">Dependency Chain</div></div>
+        </div>
+        <div class="section-box"><h3>Changed Files & Functions</h3><div id="changed-files-list" class="list-container">No changes detected</div></div>
+        <div class="section-box"><h3>Dependency Graph</h3><div id="dependency-graph" class="graph-canvas"></div></div>
+        <div class="section-box"><h3>Similarity Scores</h3><table id="similarity-table" class="data-table"><thead><tr><th>Module</th><th>Test</th><th>Similarity</th><th>Decision</th></tr></thead><tbody id="similarity-tbody"><tr><td colspan="4" class="no-data">Run pipeline to see scores</td></tr></tbody></table></div>
+      </div>
+
+      <!-- PAGE 3: CARBON -->
+      <div class="page" id="page-carbon" data-page="carbon">
+        <h2 class="page-title">Carbon Intelligence & Scheduling</h2>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Live Carbon Intensity</div><div class="metric-value metric-carbon" id="carbon-intensity-now">—</div><div class="metric-description">gCO₂/kWh</div></div>
+          <div class="metric-card"><div class="metric-label">Carbon Source</div><div class="metric-value" id="carbon-source-api">—</div><div class="metric-description">Data Provider</div></div>
+          <div class="metric-card"><div class="metric-label">Threshold Status</div><div class="metric-value" id="carbon-threshold-status">—</div><div class="metric-description">Exceeded?</div></div>
+          <div class="metric-card"><div class="metric-label">Suggested Action</div><div class="metric-value metric-action" id="carbon-action">—</div><div class="metric-description">Scheduler Decision</div></div>
+        </div>
+        <div class="chart-container"><h3>Carbon-Aware Scheduling</h3><div id="carbon-schedule-info" class="info-box"><p>Run pipeline to see scheduling recommendations.</p></div></div>
+        <div class="section-box"><h3>Detailed Carbon Data</h3><pre id="carbon-details" class="json-output">No data</pre></div>
+      </div>
+
+      <!-- PAGE 4: ML -->
+      <div class="page" id="page-ml" data-page="ml">
+        <h2 class="page-title">ML Gatekeeper — Decision Explainability</h2>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">XGBoost P(Failure)</div><div class="metric-value metric-pf" id="ml-pf-score">—</div><div class="metric-description">Failure Probability</div></div>
+          <div class="metric-card"><div class="metric-label">Risk Level</div><div class="metric-value metric-risk" id="ml-risk-level">—</div><div class="metric-description">Low / Medium / High</div></div>
+          <div class="metric-card"><div class="metric-label">Decision Gate</div><div class="metric-value" id="ml-gate-decision">—</div><div class="metric-description">RUN / PRUNE</div></div>
+          <div class="metric-card"><div class="metric-label">Confidence</div><div class="metric-value" id="ml-confidence">—</div><div class="metric-description">Safety Margin %</div></div>
+        </div>
+        <div class="section-box"><h3>Input Features Used by XGBoost</h3><table id="ml-features-table" class="data-table"><thead><tr><th>Feature</th><th>Value</th><th>Impact</th></tr></thead><tbody id="ml-features-tbody"><tr><td colspan="3" class="no-data">Run pipeline to see ML features</td></tr></tbody></table></div>
+        <div class="section-box"><h3>Explainable Decision Signals</h3><pre id="ml-explanation" class="json-output">No data</pre></div>
+      </div>
+
+      <!-- PAGE 5: CI/CD -->
+      <div class="page" id="page-cicd" data-page="cicd">
+        <h2 class="page-title">CI/CD Integration & Execution Plan</h2>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Trigger Mode</div><div class="metric-value" id="cicd-trigger">—</div><div class="metric-description">GitHub / Local / Manual</div></div>
+          <div class="metric-card"><div class="metric-label">Repository</div><div class="metric-value" id="cicd-repo">—</div><div class="metric-description">Owner/Repo</div></div>
+          <div class="metric-card"><div class="metric-label">Tests Selected</div><div class="metric-value metric-selected" id="cicd-selected-count">—</div><div class="metric-description">To Run</div></div>
+          <div class="metric-card"><div class="metric-label">Tests Pruned</div><div class="metric-value metric-pruned" id="cicd-pruned-count">—</div><div class="metric-description">Skipped</div></div>
+        </div>
+        <div class="section-box"><h3>Selected Tests (To Execute)</h3><div id="cicd-selected-tests" class="test-list"><p class="no-data">No tests selected yet</p></div></div>
+        <div class="section-box"><h3>Pruned Tests (Skipped)</h3><div id="cicd-pruned-tests" class="test-list"><p class="no-data">No tests pruned yet</p></div></div>
+        <div class="section-box"><h3>Test Execution Command</h3><div class="command-box"><code id="cicd-command">pytest --collect-only</code><button class="btn-copy" onclick="copyCommand()">📋 Copy</button></div></div>
+        <div class="section-box"><h3>Execution Summary</h3><pre id="cicd-summary" class="json-output">No data</pre></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
